@@ -59,7 +59,7 @@ const Navigation = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8 ">
+            <div className="hidden lg:flex items-center space-x-8 ">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -73,7 +73,7 @@ const Navigation = () => {
             </div>
 
             {/* Desktop CTA & Page Links */}
-            <div className="hidden md:flex items-center space-x-4 ">
+            <div className="hidden lg:flex items-center space-x-4 ">
               <Link
                 href="/about"
                 className="text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium"
@@ -99,7 +99,7 @@ const Navigation = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300 transform hover:scale-110 active:scale-95"
+              className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300 transform hover:scale-110 active:scale-95"
             >
               {isOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
@@ -110,7 +110,7 @@ const Navigation = () => {
       {/* Mobile menu */}
       <div className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
-      } md:hidden`}>
+      } lg:hidden`}>
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
         <div className="fixed right-0 top-0 h-full w-80 max-w-[90vw] bg-white shadow-xl">
           <div className="flex flex-col h-full">
