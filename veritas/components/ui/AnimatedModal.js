@@ -16,7 +16,7 @@ const AnimatedModal = ({ isOpen, onClose, children }) => {
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-md md:max-w-lg lg:max-w-xl bg-white rounded-3xl shadow-2xl overflow-hidden animate-fade-in-up">
+      <div className="relative w-full max-w-sm md:max-w-lg lg:max-w-xl bg-white rounded-3xl shadow-2xl overflow-hidden animate-fade-in-up">
         {children}
       </div>
     </div>

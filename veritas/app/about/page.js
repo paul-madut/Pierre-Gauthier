@@ -1,14 +1,10 @@
+"use client"
 import Image from 'next/image'
 import Navigation from '../../components/ui/Navigation'
 import Footer from '../../components/sections/Footer'
 import { Card, CardContent } from '../../components/ui/Card'
 import StyledButton from '../../components/ui/StyledButton'
 import { CheckIcon, ShieldIcon, StarIcon } from '../../components/ui/Icons'
-
-export const metadata = {
-  title: 'About Us - Veritas Insulation | Professional Insulation Services Ottawa',
-  description: 'Learn about Veritas Insulation\'s 10+ years of experience serving Ottawa families with premium attic insulation, air sealing, and energy efficiency solutions.',
-}
 
 export default function About() {
   const teamMembers = [
@@ -35,15 +31,15 @@ export default function About() {
     }
   ]
 
-  const milestones = [
-    { year: '2013', event: 'Veritas Insulation founded in Ottawa' },
-    { year: '2015', event: 'Reached 500 satisfied customers' },
-    { year: '2017', event: 'Became Energy Star Partner' },
-    { year: '2019', event: 'Expanded service area across Eastern Ontario' },
-    { year: '2021', event: 'Achieved 2,000 homes insulated milestone' },
-    { year: '2023', event: 'Launched eco-friendly insulation options' },
-    { year: '2024', event: 'Celebrating 2,500+ happy families served' }
-  ]
+  // const milestones = [
+  //   { year: '2013', event: 'Veritas Insulation founded in Ottawa' },
+  //   { year: '2015', event: 'Reached 500 satisfied customers' },
+  //   { year: '2017', event: 'Became Energy Star Partner' },
+  //   { year: '2019', event: 'Expanded service area across Eastern Ontario' },
+  //   { year: '2021', event: 'Achieved 2,000 homes insulated milestone' },
+  //   { year: '2023', event: 'Launched eco-friendly insulation options' },
+  //   { year: '2024', event: 'Celebrating 2,500+ happy families served' }
+  // ]
 
   const values = [
     {
@@ -72,28 +68,9 @@ export default function About() {
     {
       name: 'Energy Star Partner',
       logo: '/logos/energy-star.png',
-      alt: 'Energy Star Partner certification'
+      alt: 'Dr.Energy certification'
     },
-    {
-      name: 'Better Business Bureau',
-      logo: '/logos/bbb.png',
-      alt: 'BBB Accredited Business'
-    },
-    {
-      name: 'Home Improvement Ontario',
-      logo: '/logos/hio.png',
-      alt: 'Home Improvement Ontario certified'
-    },
-    {
-      name: 'WSIB Certified',
-      logo: '/logos/wsib.png',
-      alt: 'WSIB workplace safety certified'
-    },
-    {
-      name: 'Insulation Contractors',
-      logo: '/logos/ica.png',
-      alt: 'Insulation Contractors Association'
-    }
+
   ]
 
   return (
@@ -115,12 +92,8 @@ export default function About() {
                 </p>
                 <div className="grid grid-cols-3 gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-500 mb-1">10+</div>
-                    <div className="text-sm text-gray-600">Years Experience</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-500 mb-1">2,500+</div>
-                    <div className="text-sm text-gray-600">Homes Served</div>
+                    <div className="text-3xl font-bold text-primary-500 mb-1">50+</div>
+                    <div className="text-sm text-gray-600">Positive Reviews</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary-500 mb-1">4.9★</div>
@@ -338,10 +311,10 @@ export default function About() {
             </div>
 
             <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
+              {/* Timeline line
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div> */}
 
-              <div className="space-y-8">
+              {/* <div className="space-y-8">
                 {milestones.map((milestone, index) => (
                   <div key={milestone.year} className="relative flex items-center">
                     <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">
@@ -352,7 +325,7 @@ export default function About() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

@@ -51,7 +51,7 @@ const Footer = () => {
 
             <p className="text-gray-300 mb-6 leading-relaxed">
               Professional attic insulation services for Ottawa homes.
-              Trusted by 2,500+ families for energy savings and comfort.
+              Trusted by Ottawa families for energy savings and comfort.
             </p>
 
             {/* Contact info */}

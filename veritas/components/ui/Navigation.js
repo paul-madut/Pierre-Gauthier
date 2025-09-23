@@ -3,12 +3,15 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter, usePathname } from 'next/navigation'
 import { MenuIcon, CloseIcon } from './Icons'
 import StyledButton from './StyledButton'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,10 +32,18 @@ const Navigation = () => {
 
   const scrollToSection = (e, href) => {
     e.preventDefault()
+    setIsOpen(false)
+
+    // If not on homepage, redirect to homepage with hash
+    if (pathname !== '/') {
+      router.push(`/${href}`)
+      return
+    }
+
+    // If on homepage, scroll to section
     const target = document.querySelector(href)
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' })
-      setIsOpen(false)
     }
   }
 

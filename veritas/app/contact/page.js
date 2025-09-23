@@ -1,13 +1,9 @@
+"use client"
 import Navigation from '../../components/ui/Navigation'
 import Footer from '../../components/sections/Footer'
 import Contact from '../../components/sections/Contact'
 import { Card, CardContent } from '../../components/ui/Card'
 import { PhoneIcon, EmailIcon, LocationIcon, CheckIcon } from '../../components/ui/Icons'
-
-export const metadata = {
-  title: 'Contact Us - Get Free Insulation Quote | Veritas Insulation Ottawa',
-  description: 'Contact Veritas Insulation for your free attic insulation assessment. Serving Ottawa and surrounding areas with professional insulation services.',
-}
 
 export default function ContactPage() {
   const serviceAreas = [
@@ -68,22 +64,6 @@ export default function ContactPage() {
                 Ready to start saving on energy costs? Contact Ottawa's trusted
                 insulation specialists for your free assessment.
               </p>
-
-              {/* Quick stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-500 mb-1">24hrs</div>
-                  <div className="text-sm text-gray-600">Response Time</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-500 mb-1">2,500+</div>
-                  <div className="text-sm text-gray-600">Happy Customers</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-500 mb-1">100%</div>
-                  <div className="text-sm text-gray-600">Satisfaction Rate</div>
-                </div>
-              </div>
             </div>
 
             {/* Contact Methods */}
