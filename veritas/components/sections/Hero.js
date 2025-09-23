@@ -70,36 +70,35 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fef2f2]">
-      {/* Background Image - Centered, 90% width, 50% height */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fef2f2] pt-8">
+      {/* Background Image Div with content inside */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] h-[75%] z-0">
-        <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
-          <Image
-            src="/insulation.jpg"
-            alt="Professional attic insulation installation"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-            className="opacity-90"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
-        </div>
       </div>
+        <div
+          className="relative w-[95%] h-[75%] rounded-3xl overflow-hidden shadow-2xl"
+          style={{
+            backgroundImage: `url('/insulation.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto container-padding px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh] py-8">
+          {/* Content inside background div with 4px padding */}
+          <div className="relative z-10 max-w-7xl mx-auto p-1 h-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh] py-8">
           {/* Left Column - Main Content */}
           <div className="relative animate-fade-in-up text-center lg:text-left">
             {/* Logo above heading */}
             <div className="mb-2 flex justify-center lg:justify-start">
-              <div className="w-32 h-32 md:w-40 md:h-40 lg:w-84 lg:h-54">
+              <div className=" w-32 h-32 md:w-40 md:h-40 lg:w-84 lg:h-54">
                 <Image
                   src="/images/2.png"
                   alt="Veritas Insulation"
                   width={192}
                   height={192}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain hidden md:block"
                 />
               </div>
             </div>
@@ -258,16 +257,11 @@ const Hero = () => {
                 </div>
               </CardContent>
             </Card>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="relative z-10 flex justify-center pb-8">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center animate-bounce">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
     </section>
   )
 }
