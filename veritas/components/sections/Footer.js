@@ -1,0 +1,189 @@
+'use client'
+
+import Link from 'next/link'
+import { PhoneIcon, EmailIcon, LocationIcon } from '../ui/Icons'
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear()
+
+  const quickLinks = [
+    { name: 'How It Works', href: '#how-it-works' },
+    { name: 'Features', href: '#features' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'FAQ', href: '#faq' }
+  ]
+
+  const services = [
+    'Attic Insulation',
+    'Basement Insulation',
+    'Air Sealing',
+    'Ventilation Services',
+    'Energy Audits',
+    'Rebate Assistance'
+  ]
+
+  const serviceAreas = [
+    'Ottawa', 'Kanata', 'Nepean', 'Orleans',
+    'Barrhaven', 'Stittsville', 'Manotick', 'Gloucester'
+  ]
+
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      {/* Main footer content */}
+      <div className="max-w-7xl mx-auto container-padding py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold">V</span>
+              </div>
+              <span className="text-xl font-semibold">Veritas Insulation</span>
+            </div>
+
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Professional attic insulation services for Ottawa homes.
+              Trusted by 2,500+ families for energy savings and comfort.
+            </p>
+
+            {/* Contact info */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <PhoneIcon className="w-5 h-5 text-primary-400" />
+                <a href="tel:6138079255" className="text-gray-300 hover:text-white transition-colors">
+                  (613) 807-9255
+                </a>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <EmailIcon className="w-5 h-5 text-primary-400" />
+                <a href="mailto:pierre@veritasinsulation.com" className="text-gray-300 hover:text-white transition-colors">
+                  pierre@veritasinsulation.com
+                </a>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <LocationIcon className="w-5 h-5 text-primary-400" />
+                <span className="text-gray-300">Ottawa, Ontario</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 text-left"
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
+              <li>
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Our Services</h3>
+            <ul className="space-y-3">
+              {services.map((service) => (
+                <li key={service}>
+                  <span className="text-gray-300">{service}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Service Areas</h3>
+            <ul className="space-y-2">
+              {serviceAreas.map((area) => (
+                <li key={area}>
+                  <span className="text-gray-300">{area}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-gray-400 mt-4">
+              + 30km radius from Ottawa
+            </p>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="border-t border-gray-700 mt-12 pt-12">
+          <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl p-8 text-center">
+            <h3 className="text-2xl md:text-3xl font-light mb-4">
+              Ready to Save on Energy Costs?
+            </h3>
+            <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
+              Join 2,500+ Ottawa families who've improved their home comfort and reduced energy bills
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => scrollToSection('#contact')}
+                className="text-white px-8 py-3 rounded-lg font-semibold bg-[#168d30] hover:bg-[#158529] hover:shadow-lg hover:shadow-green-600/25 transition-all duration-300 transform hover:scale-105 glow-important"
+              >
+                Get Free Quote
+              </button>
+              <a
+                href="tel:6138079255"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 hover:border-white/80 hover:shadow-md transition-all duration-300 transform hover:scale-105"
+              >
+                Call (613) 807-9255
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-gray-700">
+        <div className="max-w-7xl mx-auto container-padding py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-sm text-gray-400">
+              © {currentYear} Veritas Insulation. All rights reserved.
+            </div>
+
+            <div className="flex items-center space-x-6 text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-400">Licensed & Insured</span>
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -8,19 +9,192 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+
+/* Glass Card Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Neumorphism Button Styles */
+.neumorphism-button {
+  background: #f5f5f5;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  transition: all 0.3s ease-out;
+}
+
+.neumorphism-button:hover {
+  box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+  transform: scale(0.95);
+}
+
+.neumorphism-button:active {
+  box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+  transform: scale(0.90);
+}
+
+/* Glow Button Styles */
+.glow-button {
+  transition: all 0.3s ease-out;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 25px rgba(22, 133, 48, 0.4), 0 0 35px rgba(22, 133, 48, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Important Button Glow */
+.glow-important {
+  animation: glow-green 2s ease-in-out infinite alternate;
+}
+
+.glow-important:hover {
+  box-shadow: 0 0 30px rgba(22, 133, 48, 0.6), 0 0 50px rgba(22, 133, 48, 0.3);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Utility Classes */
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.container-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(22, 141, 48, 0.2); }
+  100% { box-shadow: 0 0 20px rgba(22, 141, 48, 0.4); }
+}
+
+@keyframes glow-green {
+  0% { box-shadow: 0 0 5px rgba(22, 141, 48, 0.3); }
+  100% { box-shadow: 0 0 25px rgba(22, 141, 48, 0.6); }
+}
+
+@keyframes glow-button {
+  0% {
+    box-shadow: 0 0 5px rgba(22, 133, 48, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(22, 133, 48, 0.4);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(22, 133, 48, 0.2);
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-glow-green {
+  animation: glow-green 2s ease-in-out infinite alternate;
+}
+
+.animate-glow-button {
+  animation: glow-button 3s ease-in-out infinite;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
 }

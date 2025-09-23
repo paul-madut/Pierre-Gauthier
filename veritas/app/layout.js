@@ -12,8 +12,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Veritas Insulation - Coming Soon",
-  description: "Professional insulation services coming soon. Contact us for more information.",
+  title: "Veritas Insulation - Premium Attic Insulation Services Ottawa",
+  description: "Professional attic insulation services in Ottawa. Save 25-40% on energy bills with premium insulation materials. Free quotes, lifetime warranty, rebate assistance.",
+  keywords: "attic insulation Ottawa, insulation company Ottawa, energy savings, R-value insulation, blown-in insulation, air sealing",
+  author: "Veritas Insulation",
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow"
 };
 
 export default function RootLayout({ children }) {
