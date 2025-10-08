@@ -92,6 +92,12 @@ const Navigation = () => {
                 About
               </Link>
               <Link
+                href="/blog"
+                className="text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium"
+              >
+                Blog
+              </Link>
+              <Link
                 href="/contact"
                 className="text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium "
               >
@@ -155,6 +161,12 @@ const Navigation = () => {
                   className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-500 rounded-lg transition-colors font-medium"
                 >
                   About
+                </Link>
+                <Link
+                  href="/blog"
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-500 rounded-lg transition-colors font-medium"
+                >
+                  Blog
                 </Link>
                 <Link
                   href="/contact"
