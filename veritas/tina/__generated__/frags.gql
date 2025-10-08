@@ -1,9 +1,0 @@
-fragment PostParts on Post {
-  __typename
-  title
-  date
-  author
-  excerpt
-  featuredImage
-  body
-}
