@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "tinacms dev -c \"next dev --turbopack\"",
-    "build": "tinacms build && next build --turbopack",
+    "build": "next build --turbopack",
+    "build:tina": "tinacms build && next build --turbopack",
     "start": "next start",
     "tina:init": "tinacms init"
   },

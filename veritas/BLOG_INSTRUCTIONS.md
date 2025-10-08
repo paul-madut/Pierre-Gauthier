@@ -12,14 +12,15 @@ Your website now has a fully functional blog system powered by Tina CMS. You can
 - **Navigation**: Click "Blog" in the main navigation menu
 
 ### Admin Panel (Content Management)
-- **Tina CMS Admin**: http://localhost:3000/admin
+- **Tina CMS Admin**: http://localhost:3000/admin/index.html
 - Here you can create, edit, and delete blog posts visually
+- Note: The admin interface is only available in development mode (`pnpm dev`)
 
 ## Using Tina CMS
 
 ### Creating a New Blog Post
 
-1. Navigate to http://localhost:3000/admin
+1. Navigate to http://localhost:3000/admin/index.html
 2. Click on "Blog Posts" in the sidebar
 3. Click the "Create New" button
 4. Fill in the required fields:
@@ -34,7 +35,7 @@ Your website now has a fully functional blog system powered by Tina CMS. You can
 
 ### Editing Existing Posts
 
-1. Go to http://localhost:3000/admin
+1. Go to http://localhost:3000/admin/index.html
 2. Click on "Blog Posts"
 3. Select the post you want to edit
 4. Make your changes
@@ -42,7 +43,7 @@ Your website now has a fully functional blog system powered by Tina CMS. You can
 
 ### Deleting Posts
 
-1. Go to http://localhost:3000/admin
+1. Go to http://localhost:3000/admin/index.html
 2. Click on "Blog Posts"
 3. Select the post you want to delete
 4. Click the delete button (trash icon)
@@ -104,12 +105,18 @@ This starts:
 
 ### Building for Production
 
+**For local/development builds (without Tina Cloud):**
 ```bash
 pnpm build
 ```
 
+**For production with Tina Cloud (requires credentials in .env.local):**
+```bash
+pnpm build:tina
+```
+
 This will:
-1. Build Tina CMS assets
+1. Build Tina CMS assets (if using Tina Cloud)
 2. Build your Next.js application
 
 ### Starting Production Server
