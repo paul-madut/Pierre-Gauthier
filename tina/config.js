@@ -7,8 +7,8 @@ export default defineConfig({
   branch:"master",
 
   // Use local mode if no cloud credentials are provided
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || null,
-  token: process.env.TINA_TOKEN || null,
+  clientId:"ce64ad75-f84a-4361-aede-13bf1fa2af9a",
+  token: "eec05ac4a9a16086e0b078bc7d226979bbba4800",
 
   build: {
     outputFolder: "admin",
