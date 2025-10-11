@@ -47,3 +47,6 @@ tina-lock.json
 
 # netlify
 /.netlify
+
+node_modules
+.env

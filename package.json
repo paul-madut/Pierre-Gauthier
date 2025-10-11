@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "tinacms dev -c \"next dev --turbopack\"",
-    "build": "next build --turbopack",
+    "build": "tinacms build && next build --turbopack",
     "build:tina": "tinacms build && next build --turbopack",
     "start": "next start",
     "tina:init": "tinacms init"
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/node": "^24.7.2",
     "tailwindcss": "^4"
   }
 }
