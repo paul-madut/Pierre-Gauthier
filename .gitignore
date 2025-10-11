@@ -43,7 +43,6 @@ next-env.d.ts
 # tina cms
 /tina/__generated__
 /public/admin
-tina-lock.json
 
 # netlify
 /.netlify
