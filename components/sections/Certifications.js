@@ -33,7 +33,7 @@ const Certifications = () => {
 
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto container-padding">
+      <div className="max-w-[1400px] mx-auto container-padding">
         <div className="text-center mb-12">
           <h2 className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-4">
             Trusted & Certified

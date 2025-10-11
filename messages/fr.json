@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "howItWorks": "Comment ça fonctionne",
+    "features": "Caractéristiques",
+    "pricing": "Tarification",
+    "testimonials": "Témoignages",
+    "faq": "FAQ",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact",
+    "getFreeQuote": "Devis gratuit",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Arrêtez de gaspiller la chaleur.",
+    "titleHighlight": "Économisez des centaines",
+    "titleEnd": "sur votre facture d'énergie.",
+    "subtitle": "Solutions d'isolation de grenier premium qui offrent un confort durable, des économies d'énergie et une maison plus silencieuse pour votre famille.",
+    "ctaPrimary": "Obtenez une évaluation gratuite",
+    "ctaSecondary": "Comment ça fonctionne",
+    "formTitle": "Obtenez votre devis gratuit",
+    "formSubtitle": "Appelez-nous au {phone} ou remplissez le formulaire ci-dessous",
+    "fullName": "Nom complet",
+    "phoneNumber": "Numéro de téléphone",
+    "emailAddress": "Adresse courriel",
+    "submitButton": "Obtenir un devis gratuit",
+    "submitting": "Envoi en cours...",
+    "successMessage": "✓ Merci! Nous vous contacterons dans les 24 heures en semaine pour planifier votre évaluation gratuite.",
+    "errorMessage": "✗ Une erreur s'est produite. Veuillez réessayer ou nous appeler directement.",
+    "disclaimer": "Nous vous contacterons dans les 24 heures en semaine. Aucun spam garanti.",
+    "responseTime": "Temps de réponse",
+    "responseTimeValue": "24 heures en semaine",
+    "freeAssessment": "Évaluation gratuite",
+    "freeAssessmentValue": "Sans obligation"
+  },
+  "testimonials": {
+    "title": "Résultats réels de vrais clients",
+    "subtitle": "Découvrez comment nous avons aidé les familles d'Ottawa à économiser de l'argent et à améliorer le confort de leur maison",
+    "trustIndicators": {
+      "satisfaction": "Satisfaction client",
+      "rating": "Note moyenne",
+      "complaints": "Plaintes non résolues"
+    }
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "Notre processus éprouvé en 3 étapes garantit des résultats professionnels et un confort durable",
+    "step1": {
+      "title": "Évaluation gratuite de votre maison",
+      "description": "Nos techniciens certifiés inspectent votre grenier et recommandent la valeur R optimale pour une efficacité énergétique maximale.",
+      "benefit": "Solution personnalisée pour votre maison spécifique"
+    },
+    "step2": {
+      "title": "Installation professionnelle",
+      "description": "Installation rapide et propre par notre équipe certifiée utilisant des matériaux de pointe et des techniques contrôlées contre les dégâts.",
+      "benefit": "Perturbation minimale de votre routine quotidienne"
+    },
+    "step3": {
+      "title": "Économies d'énergie et garantie",
+      "description": "Vérification des performances et garantie complète assurant votre confort et vos économies pour les années à venir.",
+      "benefit": "Résultats garantis avec garantie à vie"
+    }
+  },
+  "features": {
+    "title": "Pourquoi choisir Veritas",
+    "subtitle": "Matériaux premium, techniques éprouvées et qualité de service inégalée",
+    "feature1": {
+      "title": "Matériaux à valeur R élevée",
+      "description": "Performance thermique de première classe avec des matériaux d'isolation premium qui dépassent les normes de l'industrie.",
+      "benefits": ["Résistance thermique R-60+", "Matériaux certifiés Energy Star", "Options résistantes au feu disponibles"]
+    },
+    "feature2": {
+      "title": "Scellage d'air et ventilation",
+      "description": "Services complets de scellage d'air qui améliorent le confort, la qualité de l'air intérieur et préviennent les pertes d'énergie.",
+      "benefits": ["Élimination des courants d'air", "Contrôle de l'humidité", "Qualité de l'air améliorée"]
+    },
+    "feature3": {
+      "title": "Options écologiques",
+      "description": "Solutions d'isolation durables utilisant des matériaux recyclés et des options à faible COV pour des maisons plus saines.",
+      "benefits": ["80% de contenu recyclé", "Zéro produit chimique nocif", "Réduction de l'empreinte carbone"]
+    },
+    "feature4": {
+      "title": "Aide aux rabais",
+      "description": "Nous vous aidons à naviguer et à réclamer tous les rabais gouvernementaux et des services publics disponibles pour maximiser vos économies.",
+      "benefits": ["Jusqu'à 5 000 $ de rabais", "Aide à la demande", "Économies maximales garanties"]
+    },
+    "ctaTitle": "Prêt à économiser de l'énergie?",
+    "ctaSubtitle": "Obtenez une évaluation personnalisée et un devis pour votre maison en 24 heures",
+    "ctaButton": "Planifier une évaluation gratuite"
+  },
+  "mission": {
+    "title": "Notre mission",
+    "paragraph1": "Chez Veritas Isolation, nous croyons que chaque famille mérite une maison confortable et écoénergétique qui protège ce qui compte le plus.",
+    "paragraph2": "Depuis plus d'une décennie, nous transformons les maisons d'Ottawa avec des solutions d'isolation premium qui offrent de vrais résultats : des factures d'énergie réduites, un confort amélioré et la tranquillité d'esprit sachant que votre maison est bien protégée.",
+    "paragraph3": "Nous ne nous contentons pas d'isolation - nous créons des espaces de vie plus sains et plus durables tout en aidant les familles à économiser de l'argent pour les choses qui comptent vraiment.",
+    "value1Title": "Confiance",
+    "value1Description": "Tarification transparente, évaluations honnêtes",
+    "value2Title": "Qualité",
+    "value2Description": "Matériaux premium, installation experte",
+    "value3Title": "Soin",
+    "value3Description": "Le confort de votre famille est notre priorité",
+    "averageSavings": "Économies moyennes",
+    "roi": "Retour sur investissement"
+  },
+  "pricing": {
+    "title": "Pourquoi notre tarification est transparente",
+    "subtitle": "Découvrez une tarification honnête et directe sans surprises.",
+    "transparentPricing1": {
+      "title": "Évaluation approfondie",
+      "description": "Évaluation pratique de l'isolation du grenier avec visite détaillée et audit de la maison",
+      "benefits": ["Évaluation énergétique complète de la maison", "Rapport d'inspection détaillé", "Recommandations professionnelles"]
+    },
+    "transparentPricing2": {
+      "title": "Aucun frais caché",
+      "description": "Tous les facteurs clairement expliqués - matériaux, main-d'œuvre et services supplémentaires",
+      "benefits": ["Ventilation transparente des coûts", "Aucun frais surprise", "Devis écrits fournis"]
+    },
+    "transparentPricing3": {
+      "title": "Paiement flexible",
+      "description": "Plusieurs options de paiement disponibles pour répondre à vos besoins",
+      "benefits": ["Plusieurs méthodes de paiement", "Options de financement disponibles", "Aide aux rabais incluse"]
+    },
+    "paymentMethodsTitle": "Modes de paiement acceptés",
+    "paymentMethods": {
+      "cash": "Espèces",
+      "check": "Chèque",
+      "etransfer": "Virement électronique",
+      "creditCard": "Carte de crédit",
+      "debitCard": "Carte de débit",
+      "online": "Stripe/PayPal",
+      "plan": "Accord de plan de paiement (arrangé séparément)"
+    },
+    "factorsTitle": "Facteurs de tarification clés",
+    "factorsSubtitle": "Votre devis est calculé en fonction de ces facteurs principaux pour une tarification précise et équitable",
+    "factor1": {
+      "title": "Taille et accès du grenier",
+      "description": "La superficie en pieds carrés et l'accessibilité déterminent les besoins en matériaux et la complexité de la main-d'œuvre",
+      "details": ["Superficie du grenier en pieds carrés", "Difficulté d'accès", "Hauteur du plafond"]
+    },
+    "factor2": {
+      "title": "Type d'isolation et valeur R",
+      "description": "Choix du matériau et exigences d'épaisseur en fonction de vos besoins spécifiques",
+      "details": ["Qualité du matériau", "Cible de valeur R", "Profondeur de l'isolation"]
+    },
+    "factor3": {
+      "title": "Services supplémentaires",
+      "description": "Travaux supplémentaires pouvant être nécessaires pour une performance d'isolation optimale",
+      "details": ["Scellage d'air", "Améliorations de la ventilation", "Retrait de l'ancienne isolation"]
+    },
+    "ctaTitle": "Prêt pour votre devis personnalisé?",
+    "ctaSubtitle": "Obtenez votre devis honnête et détaillé sans frais cachés ni surprises",
+    "ctaButton": "Obtenir votre devis personnalisé"
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "subtitle": "Obtenez des réponses aux questions courantes sur l'isolation de grenier",
+    "questions": [
+      {
+        "q": "Combien de temps prend l'installation de l'isolation de grenier?",
+        "a": "La plupart des installations résidentielles sont complétées en 4 à 8 heures, selon la taille de votre maison. Nous travaillons efficacement pour minimiser les perturbations de votre routine quotidienne."
+      },
+      {
+        "q": "Quelle valeur R d'isolation ai-je besoin à Ottawa?",
+        "a": "Pour le climat d'Ottawa, nous recommandons R-60 à R-70 pour une efficacité énergétique optimale. Notre évaluation déterminera la valeur R exacte nécessaire pour votre maison spécifique et vos niveaux d'isolation actuels."
+      },
+      {
+        "q": "L'installation de l'isolation créera-t-elle du désordre dans ma maison?",
+        "a": "Non. Nous utilisons des revêtements de protection dans toute votre maison et employons des méthodes d'installation contrôlées contre la poussière. Notre équipe effectue un nettoyage complet, laissant votre maison plus propre que nous ne l'avons trouvée."
+      },
+      {
+        "q": "Quels rabais sont disponibles pour les améliorations d'isolation?",
+        "a": "Les résidents de l'Ontario peuvent recevoir jusqu'à 5 000 $ en rabais combinés des programmes fédéraux, provinciaux et des services publics. Nous gérons toute la paperasse et nous assurons que vous recevez les rabais maximaux disponibles."
+      },
+      {
+        "q": "Combien vais-je économiser sur mes factures d'énergie?",
+        "a": "La plupart des clients constatent une réduction de 25 à 40% des coûts de chauffage et de climatisation. Les économies exactes dépendent de l'isolation actuelle de votre maison, de sa taille et de vos habitudes de consommation d'énergie."
+      },
+      {
+        "q": "Offrez-vous des garanties sur votre travail?",
+        "a": "Oui. Nous offrons des garanties complètes: 10 ans sur les installations Standard et une garantie à vie sur les forfaits Premium. Les matériaux sont également accompagnés de garanties du fabricant."
+      },
+      {
+        "q": "Pouvez-vous isoler d'autres zones que le grenier?",
+        "a": "Absolument. Nous isolons également les sous-sols, les vides sanitaires, les murs et les solives de rive. Notre évaluation identifiera toutes les zones où une meilleure isolation peut profiter à votre maison."
+      },
+      {
+        "q": "L'isolation soufflée est-elle meilleure que l'isolation en nattes?",
+        "a": "Pour les greniers, l'isolation soufflée est supérieure car elle remplit complètement les espaces et les zones irrégulières, offrant de meilleures performances thermiques et un meilleur scellage d'air par rapport aux nattes traditionnelles."
+      }
+    ],
+    "stillHaveQuestionsTitle": "Vous avez encore des questions?",
+    "stillHaveQuestionsSubtitle": "Nos experts en isolation sont prêts à fournir des réponses personnalisées",
+    "getConsultation": "Obtenir une consultation d'expert",
+    "callNow": "Appelez le (613) 807-9255"
+  },
+  "contact": {
+    "title": "Obtenez votre évaluation gratuite",
+    "subtitle": "Prêt à commencer à économiser sur les coûts énergétiques? Obtenez un devis personnalisé dans les 24 heures en semaine.",
+    "formTitle": "Demander un devis gratuit",
+    "successMessage": "✓ Merci! Nous vous contacterons dans les 24 heures en semaine pour planifier votre évaluation gratuite.",
+    "errorMessage": "✗ Une erreur s'est produite. Veuillez réessayer ou nous appeler directement.",
+    "fullName": "Nom complet",
+    "emailAddress": "Adresse courriel",
+    "phoneNumber": "Numéro de téléphone",
+    "homeSize": "Taille de la maison (pi²)",
+    "homeAddress": "Adresse de la maison",
+    "additionalDetails": "Détails supplémentaires",
+    "selectSize": "Sélectionner la taille",
+    "under1000": "Moins de 1 000 pi²",
+    "1000to1500": "1 000 - 1 500 pi²",
+    "1500to2000": "1 500 - 2 000 pi²",
+    "2000to3000": "2 000 - 3 000 pi²",
+    "over3000": "Plus de 3 000 pi²",
+    "namePlaceholder": "Jean Dupont",
+    "emailPlaceholder": "jean@exemple.com",
+    "phonePlaceholder": "(613) 555-0123",
+    "addressPlaceholder": "123 rue Principale, Ottawa, ON",
+    "messagePlaceholder": "Parlez-nous de vos objectifs d'isolation, de vos problèmes actuels ou de vos horaires préférés...",
+    "submitButton": "Obtenir un devis gratuit",
+    "submitting": "Envoi en cours...",
+    "disclaimer": "En soumettant ce formulaire, vous acceptez d'être contacté au sujet de nos services. Nous respectons votre vie privée et ne partageons jamais vos informations.",
+    "contactInfoTitle": "Coordonnées",
+    "phone": "Téléphone",
+    "email": "Courriel",
+    "serviceArea": "Zone de service",
+    "serviceAreaValue": "Ottawa et environs",
+    "serviceAreasTitle": "Zones de service",
+    "dontSeeArea": "Vous ne voyez pas votre zone? {link} - nous pourrions quand même vous aider!",
+    "callUs": "Appelez-nous",
+    "needHelpTitle": "Besoin d'aide immédiate?",
+    "needHelpSubtitle": "Pour des problèmes d'isolation urgents ou des consultations d'urgence",
+    "callNowButton": "Appelez maintenant"
+  },
+  "footer": {
+    "companyDescription": "Services professionnels d'isolation de grenier pour les maisons d'Ottawa. De confiance par les familles d'Ottawa pour les économies d'énergie et le confort.",
+    "quickLinks": "Liens rapides",
+    "ourServices": "Nos services",
+    "serviceAreas": "Zones de service",
+    "services": {
+      "atticInsulation": "Isolation de grenier",
+      "basementInsulation": "Isolation de sous-sol",
+      "airSealing": "Scellage d'air",
+      "ventilation": "Services de ventilation",
+      "energyAudits": "Audits énergétiques",
+      "rebateAssistance": "Aide aux rabais"
+    },
+    "radiusNote": "+ 30 km de rayon autour d'Ottawa",
+    "ctaTitle": "Prêt à économiser sur les coûts énergétiques?",
+    "ctaSubtitle": "Rejoignez plus de 2 500 familles d'Ottawa qui ont amélioré le confort de leur maison et réduit leurs factures d'énergie",
+    "getFreeQuote": "Obtenir un devis gratuit",
+    "callPhone": "Appelez le (613) 807-9255",
+    "copyright": "© {year} Veritas Isolation. Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "licensedInsured": "Autorisé et assuré"
+  },
+  "common": {
+    "phone": "(613) 807-9255",
+    "email": "pierre@veritasinsulation.com",
+    "companyName": "Veritas Isolation"
+  }
+}

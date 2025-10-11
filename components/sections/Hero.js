@@ -2,10 +2,13 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import StyledButton from '../ui/StyledButton'
 import { Card, CardContent } from '../ui/Card'
 
 const Hero = () => {
+  const t = useTranslations('hero')
+  const tCommon = useTranslations('common')
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -70,23 +73,25 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fef2f2] pt-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fef2f2] pt-20 sm:pt-24">
       {/* Background Image Div with content inside */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] h-[75%] z-0">
       </div>
-        <div
-          className="relative w-[95%] h-[75%] rounded-3xl overflow-hidden shadow-2xl"
-          style={{
-            backgroundImage: `url('/insulation.jpg')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
+        <div className="relative w-[95%] h-[75%] rounded-3xl overflow-hidden shadow-2xl">
+          <Image
+            src="/insulation.jpg"
+            alt="Insulation professional at work"
+            fill
+            priority
+            quality={100}
+            sizes="95vw"
+            className="object-cover"
+            style={{ imageRendering: 'high-quality' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/30" />
 
           {/* Content inside background div with 4px padding */}
-          <div className="relative z-10 max-w-7xl mx-auto p-1 h-full">
+          <div className="relative z-10 max-w-[1400px] mx-auto p-1 h-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh] py-8">
           {/* Left Column - Main Content */}
           <div className="relative animate-fade-in-up text-center lg:text-left">
@@ -103,16 +108,15 @@ const Hero = () => {
               </div>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tighter tracking-tighter">
-              Stop Wasting Heat.{' '}
+              {t('title')}{' '}
               <span className="text-primary-500 font-medium">
-                Save Hundreds
+                {t('titleHighlight')}
               </span>{' '}
-              on Your Energy Bill.
+              {t('titleEnd')}
             </h2>
 
             <p className="text-xl md:text-2xl text-[#fef2f2] mb-8 leading-relaxed font-light">
-              Premium attic insulation solutions that deliver lasting comfort,
-              energy savings, and a quieter home for your family.
+              {t('subtitle')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
@@ -122,14 +126,14 @@ const Hero = () => {
                 onClick={scrollToContact}
                 className="glow-important"
               >
-                Get a Free Assessment
+                {t('ctaPrimary')}
               </StyledButton>
               <StyledButton
                 variant="primary"
                 size="xl"
                 onClick={() => document.querySelector('#how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                How It Works
+                {t('ctaSecondary')}
               </StyledButton>
             </div>
 
@@ -156,17 +160,19 @@ const Hero = () => {
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-                    Get Your Free Quote
+                    {t('formTitle')}
                   </h2>
                   <p className="text-gray-600">
-                    Call us at <a href="tel:6138079255" className="text-primary-500 font-medium hover:underline">(613) 807-9255</a> or fill out the form below
+                    {t('formSubtitle', { phone: tCommon('phone') }).split('{phone}')[0]}
+                    <a href={`tel:${tCommon('phone').replace(/[^0-9]/g, '')}`} className="text-primary-500 font-medium hover:underline">{tCommon('phone')}</a>
+                    {t('formSubtitle', { phone: tCommon('phone') }).split('{phone}')[1]}
                   </p>
                 </div>
 
                 {submitStatus === 'success' && (
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
                     <p className="text-green-800 text-sm">
-                      ✓ Thank you! We'll contact you within 24 hours on weekdays to schedule your free assessment.
+                      {t('successMessage')}
                     </p>
                   </div>
                 )}
@@ -174,7 +180,7 @@ const Hero = () => {
                 {submitStatus === 'error' && (
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
                     <p className="text-red-800 text-sm">
-                      ✗ Something went wrong. Please try again or call us directly.
+                      {t('errorMessage')}
                     </p>
                   </div>
                 )}
@@ -199,7 +205,7 @@ const Hero = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                      placeholder="Full Name"
+                      placeholder={t('fullName')}
                     />
                   </div>
 
@@ -211,7 +217,7 @@ const Hero = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                      placeholder="Phone Number"
+                      placeholder={t('phoneNumber')}
                     />
                   </div>
 
@@ -223,7 +229,7 @@ const Hero = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                      placeholder="Email Address"
+                      placeholder={t('emailAddress')}
                     />
                   </div>
 
@@ -234,11 +240,11 @@ const Hero = () => {
                     className="w-full glow-important"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? 'Sending...' : 'Get Free Quote Now'}
+                    {isSubmitting ? t('submitting') : t('submitButton')}
                   </StyledButton>
 
                   <p className="text-xs text-gray-500 text-center">
-                    We'll contact you within 24 hours on weekdays. No spam, guaranteed.
+                    {t('disclaimer')}
                   </p>
                 </form>
 
@@ -246,12 +252,12 @@ const Hero = () => {
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <div className="text-sm font-medium text-gray-900 mb-1">Response Time</div>
-                      <div className="text-xs text-gray-600">Weekdays 24 hours</div>
+                      <div className="text-sm font-medium text-gray-900 mb-1">{t('responseTime')}</div>
+                      <div className="text-xs text-gray-600">{t('responseTimeValue')}</div>
                     </div>
                     <div>
-                      <div className="text-sm font-medium text-gray-900 mb-1">Free Assessment</div>
-                      <div className="text-xs text-gray-600">No obligation</div>
+                      <div className="text-sm font-medium text-gray-900 mb-1">{t('freeAssessment')}</div>
+                      <div className="text-xs text-gray-600">{t('freeAssessmentValue')}</div>
                     </div>
                   </div>
                 </div>

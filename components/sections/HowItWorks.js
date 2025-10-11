@@ -1,35 +1,37 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Card, CardContent } from '../ui/Card'
 import Card3D from '../ui/Card3D'
 import { EyeIcon, ToolsIcon, WarrantyIcon } from '../ui/Icons'
 
 const HowItWorks = () => {
+  const t = useTranslations('howItWorks')
   const steps = [
     {
       step: '01',
-      title: 'Free Home Assessment',
-      description: 'Our certified technicians inspect your attic and recommend the optimal R-value for maximum energy efficiency.',
-      benefit: 'Personalized solution for your specific home',
+      title: t('step1.title'),
+      description: t('step1.description'),
+      benefit: t('step1.benefit'),
       icon: EyeIcon,
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
       alt: 'Technician inspecting attic insulation'
     },
     {
       step: '02',
-      title: 'Professional Installation',
-      description: 'Fast, clean installation by our certified crew using industry-leading materials and mess-controlled techniques.',
-      benefit: 'Minimal disruption to your daily routine',
+      title: t('step2.title'),
+      description: t('step2.description'),
+      benefit: t('step2.benefit'),
       icon: ToolsIcon,
       image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&h=400&fit=crop',
       alt: 'Professional insulation installation in progress'
     },
     {
       step: '03',
-      title: 'Energy Savings & Warranty',
-      description: 'Performance verification and comprehensive warranty ensuring your comfort and savings for years to come.',
-      benefit: 'Guaranteed results with lifetime warranty',
+      title: t('step3.title'),
+      description: t('step3.description'),
+      benefit: t('step3.benefit'),
       icon: WarrantyIcon,
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
       alt: 'Energy meter showing reduced consumption'
@@ -38,13 +40,13 @@ const HowItWorks = () => {
 
   return (
     <section id="how-it-works" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto container-padding">
+      <div className="max-w-[1400px] mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            How It Works
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Our proven 3-step process ensures professional results and lasting comfort
+            {t('subtitle')}
           </p>
         </div>
 

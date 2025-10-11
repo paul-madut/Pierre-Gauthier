@@ -1,46 +1,48 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Card, CardContent } from '../ui/Card'
 import { ShieldIcon, HomeIcon, LeafIcon, DollarIcon } from '../ui/Icons'
 import StyledButton from '../ui/StyledButton'
 
 const Features = () => {
+  const t = useTranslations('features')
   const features = [
     {
       icon: ShieldIcon,
-      title: 'High R-Value Materials',
-      description: 'Best-in-class thermal performance with premium insulation materials that exceed industry standards.',
-      benefits: ['R-60+ thermal resistance', 'Energy Star certified materials', 'Fire-resistant options available']
+      title: t('feature1.title'),
+      description: t('feature1.description'),
+      benefits: [t('feature1.benefits.0'), t('feature1.benefits.1'), t('feature1.benefits.2')]
     },
     {
       icon: HomeIcon,
-      title: 'Air-Sealing & Ventilation',
-      description: 'Complete air-sealing services that improve comfort, indoor air quality, and prevent energy loss.',
-      benefits: ['Drafts elimination', 'Moisture control', 'Improved air quality']
+      title: t('feature2.title'),
+      description: t('feature2.description'),
+      benefits: [t('feature2.benefits.0'), t('feature2.benefits.1'), t('feature2.benefits.2')]
     },
     {
       icon: LeafIcon,
-      title: 'Eco-Friendly Options',
-      description: 'Sustainable insulation solutions using recycled materials and low-VOC options for healthier homes.',
-      benefits: ['80% recycled content', 'Zero harmful chemicals', 'Carbon footprint reduction']
+      title: t('feature3.title'),
+      description: t('feature3.description'),
+      benefits: [t('feature3.benefits.0'), t('feature3.benefits.1'), t('feature3.benefits.2')]
     },
     {
       icon: DollarIcon,
-      title: 'Rebate Assistance',
-      description: 'We help you navigate and claim all available government and local utility rebates to maximize savings.',
-      benefits: ['Up to $5,000 in rebates', 'Application assistance', 'Maximum savings guaranteed']
+      title: t('feature4.title'),
+      description: t('feature4.description'),
+      benefits: [t('feature4.benefits.0'), t('feature4.benefits.1'), t('feature4.benefits.2')]
     }
   ]
 
   return (
     <section id="features" className="section-padding bg-gray-50">
-      <div className="max-w-7xl mx-auto container-padding">
+      <div className="max-w-[1400px] mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Why Choose Veritas
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Premium materials, proven techniques, and unmatched service quality
+            {t('subtitle')}
           </p>
         </div>
 
@@ -86,10 +88,10 @@ const Features = () => {
         <div className="text-center mt-16">
           <div className="bg-primary-500 rounded-3xl p-8 md:p-12 text-black">
             <h3 className="text-3xl md:text-4xl font-light mb-4">
-              Ready to Start Saving Energy?
+              {t('ctaTitle')}
             </h3>
             <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              Get a personalized assessment and quote for your home in 24 hours
+              {t('ctaSubtitle')}
             </p>
             <StyledButton
               variant="secondary"
@@ -97,7 +99,7 @@ const Features = () => {
               className="glow-important"
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Schedule Free Assessment
+              {t('ctaButton')}
             </StyledButton>
           </div>
         </div>

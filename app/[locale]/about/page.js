@@ -1,10 +1,10 @@
 "use client"
 import Image from 'next/image'
-import Navigation from '../../components/ui/Navigation'
-import Footer from '../../components/sections/Footer'
-import { Card, CardContent } from '../../components/ui/Card'
-import StyledButton from '../../components/ui/StyledButton'
-import { CheckIcon, ShieldIcon, StarIcon } from '../../components/ui/Icons'
+import Navigation from '@/components/ui/Navigation'
+import Footer from '@/components/sections/Footer'
+import { Card, CardContent } from '@/components/ui/Card'
+import StyledButton from '@/components/ui/StyledButton'
+import { CheckIcon, ShieldIcon, StarIcon } from '@/components/ui/Icons'
 
 export default function About() {
   const teamMembers = [
@@ -79,7 +79,7 @@ export default function About() {
       <main className="pt-16">
         {/* Hero Section */}
         <section className="section-padding bg-gradient-to-br from-primary-50 to-white">
-          <div className="max-w-7xl mx-auto container-padding">
+          <div className="max-w-[1400px] mx-auto container-padding">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fade-in-up">
                 <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
@@ -170,7 +170,7 @@ export default function About() {
 
         {/* Company Values */}
         <section className="section-padding bg-gray-50">
-          <div className="max-w-7xl mx-auto container-padding">
+          <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
                 Our Values
@@ -202,7 +202,7 @@ export default function About() {
 
         {/* Certifications Section */}
         <section className="section-padding bg-white">
-          <div className="max-w-7xl mx-auto container-padding">
+          <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
                 Credentials & Certifications
@@ -252,7 +252,7 @@ export default function About() {
 
         {/* Team Section */}
         <section className="section-padding bg-white">
-          <div className="max-w-7xl mx-auto container-padding">
+          <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
                 Meet Our Team

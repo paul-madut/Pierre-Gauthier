@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
@@ -10,6 +11,7 @@ import { CheckIcon, EyeIcon, ShieldIcon, DollarIcon, HomeIcon, RulerIcon, Calcul
 gsap.registerPlugin(ScrollTrigger)
 
 const Pricing = () => {
+  const t = useTranslations('pricing')
   const sectionRef = useRef(null)
   const cardsRef = useRef(null)
   const factorCardsRef = useRef(null)
@@ -124,32 +126,32 @@ const Pricing = () => {
   const transparentPricing = [
     {
       icon: EyeIcon,
-      title: 'Thorough Assessment',
-      description: 'Hands-on attic insulation assessment with detailed home visit and audit',
-      benefits: ['Complete home energy evaluation', 'Detailed inspection report', 'Professional recommendations']
+      title: t('transparentPricing1.title'),
+      description: t('transparentPricing1.description'),
+      benefits: [t('transparentPricing1.benefits.0'), t('transparentPricing1.benefits.1'), t('transparentPricing1.benefits.2')]
     },
     {
       icon: ShieldIcon,
-      title: 'No Hidden Fees',
-      description: 'All factors clearly explained—materials, labor, and additional services',
-      benefits: ['Transparent cost breakdown', 'No surprise charges', 'Written estimates provided']
+      title: t('transparentPricing2.title'),
+      description: t('transparentPricing2.description'),
+      benefits: [t('transparentPricing2.benefits.0'), t('transparentPricing2.benefits.1'), t('transparentPricing2.benefits.2')]
     },
     {
       icon: DollarIcon,
-      title: 'Flexible Payment',
-      description: 'Multiple payment options available to suit your needs',
-      benefits: ['Multiple payment methods', 'Financing options available', 'Rebate assistance included']
+      title: t('transparentPricing3.title'),
+      description: t('transparentPricing3.description'),
+      benefits: [t('transparentPricing3.benefits.0'), t('transparentPricing3.benefits.1'), t('transparentPricing3.benefits.2')]
     }
   ]
 
   const paymentMethods = [
-    'Cash',
-    'Check',
-    'E-transfer',
-    'Credit Card',
-    'Debit Card',
-    'Stripe/PayPal',
-    'Payment plan agreement (arranged separately)'
+    t('paymentMethods.cash'),
+    t('paymentMethods.check'),
+    t('paymentMethods.etransfer'),
+    t('paymentMethods.creditCard'),
+    t('paymentMethods.debitCard'),
+    t('paymentMethods.online'),
+    t('paymentMethods.plan')
   ]
 
   const scrollToContact = () => {
@@ -161,13 +163,13 @@ const Pricing = () => {
 
   return (
     <section id="pricing" className="section-padding bg-gray-50" ref={sectionRef}>
-      <div className="max-w-7xl mx-auto container-padding">
+      <div className="max-w-[1400px] mx-auto container-padding">
         <div className="text-center mb-16 pricing-header">
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Why Our Pricing is Transparent
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Experience honest, straightforward pricing with no surprises.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -213,7 +215,7 @@ const Pricing = () => {
         <Card variant="elevated" className="p-8 mb-16 payment-methods">
           <CardContent className="p-0">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
-              Payment Methods Accepted
+              {t('paymentMethodsTitle')}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {paymentMethods.map((method, index) => (
@@ -229,10 +231,10 @@ const Pricing = () => {
         {/* Pricing Factors Section */}
         <div className="text-center mb-16 pricing-factors-header">
           <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-6 tracking-tight">
-            Key Pricing Factors
+            {t('factorsTitle')}
           </h3>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Your quote is calculated based on these primary factors for accurate, fair pricing
+            {t('factorsSubtitle')}
           </p>
         </div>
 
@@ -244,23 +246,23 @@ const Pricing = () => {
                 <HomeIcon className="w-8 h-8 text-blue-500" />
               </div>
               <h4 className="text-2xl font-semibold text-gray-900 mb-4">
-                Attic Size & Access
+                {t('factor1.title')}
               </h4>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Square footage and accessibility determine material needs and labor complexity
+                {t('factor1.description')}
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">Attic square footage</span>
+                  <span className="text-gray-700 font-medium">{t('factor1.details.0')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">Access difficulty</span>
+                  <span className="text-gray-700 font-medium">{t('factor1.details.1')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">Ceiling height</span>
+                  <span className="text-gray-700 font-medium">{t('factor1.details.2')}</span>
                 </div>
               </div>
             </CardContent>
@@ -272,23 +274,23 @@ const Pricing = () => {
                 <RulerIcon className="w-8 h-8 text-purple-500" />
               </div>
               <h4 className="text-2xl font-semibold text-gray-900 mb-4">
-                Insulation Type & R-Value
+                {t('factor2.title')}
               </h4>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Material choice and thickness requirements based on your specific needs
+                {t('factor2.description')}
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">Material grade</span>
+                  <span className="text-gray-700 font-medium">{t('factor2.details.0')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">R-value target</span>
+                  <span className="text-gray-700 font-medium">{t('factor2.details.1')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">Insulation depth</span>
+                  <span className="text-gray-700 font-medium">{t('factor2.details.2')}</span>
                 </div>
               </div>
             </CardContent>
@@ -300,23 +302,23 @@ const Pricing = () => {
                 <CalculatorIcon className="w-8 h-8 text-orange-500" />
               </div>
               <h4 className="text-2xl font-semibold text-gray-900 mb-4">
-                Additional Services
+                {t('factor3.title')}
               </h4>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Extra work that may be needed for optimal insulation performance
+                {t('factor3.description')}
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">Air sealing</span>
+                  <span className="text-gray-700 font-medium">{t('factor3.details.0')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">Ventilation upgrades</span>
+                  <span className="text-gray-700 font-medium">{t('factor3.details.1')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700 font-medium">Old insulation removal</span>
+                  <span className="text-gray-700 font-medium">{t('factor3.details.2')}</span>
                 </div>
               </div>
             </CardContent>
@@ -327,10 +329,10 @@ const Pricing = () => {
         <div className="text-center" ref={ctaRef}>
           <div className="bg-primary-500 rounded-3xl p-8 md:p-12 text-black cta-section">
             <h3 className="text-3xl md:text-4xl font-light mb-4">
-              Ready for Your Custom Quote?
+              {t('ctaTitle')}
             </h3>
             <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              Get your honest, detailed quote with no hidden fees or surprises
+              {t('ctaSubtitle')}
             </p>
             <StyledButton
               variant="secondary"
@@ -338,7 +340,7 @@ const Pricing = () => {
               className="glow-important  text-[#168530] border-white hover:bg-white hover:text-[#168530] hover:border-[#168530]"
               onClick={scrollToContact}
             >
-              Get Your Custom Quote
+              {t('ctaButton')}
             </StyledButton>
           </div>
         </div>

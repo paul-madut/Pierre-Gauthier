@@ -109,52 +109,52 @@ const FreeQuoteModal = () => {
       </button>
 
       {/* Header with gradient */}
-      <div className="bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-8 text-[#168530] font-extrabold text-center">
+      <div className="bg-gradient-to-r from-primary-500 to-primary-600 px-4 py-5 sm:px-8 sm:py-8 text-[#168530] font-extrabold text-center">
         <div>
-          <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 sm:w-24 sm:h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
            <div className='w-full p-2'>
           <Image src="/images/1.png" alt="Veritas Logo" width={600} height={600} className="w-full h-full object-contain" />
            </div>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-2">
+          <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-1 sm:mb-2">
             Limited Time Offer!
           </h2>
-          <p className="text-black">
+          <p className="text-black text-sm sm:text-base">
             FREE Attic Inspection & Quote
           </p>
         </div>
       </div>
 
       {/* Content */}
-      <div className="px-8 py-6">
+      <div className="px-4 py-4 sm:px-8 sm:py-6">
         <div>
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+          <div className="text-center mb-4 sm:mb-6">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">
               Save Up to 40% on Energy Bills
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
               Get a professional assessment of your attic insulation and discover
               how much you could save with our premium R-60+ solutions.
             </p>
           </div>
 
           {/* Benefits */}
-          <div className="grid grid-cols-2 gap-3 mb-6 text-sm justify-center items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6 text-xs sm:text-sm justify-center items-center">
+            <div className="flex items-center space-x-1.5 sm:space-x-2">
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
               <span className="text-gray-700">No obligation</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <div className="flex items-center space-x-1.5 sm:space-x-2">
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
               <span className="text-gray-700">Licensed experts</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-gray-700">Weekdays 24hr response</span>
+            <div className="flex items-center space-x-1.5 sm:space-x-2">
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+              <span className="text-gray-700">24hr response</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-gray-700">Rebate assistance</span>
+            <div className="flex items-center space-x-1.5 sm:space-x-2">
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+              <span className="text-gray-700">Rebate help</span>
             </div>
           </div>
 
@@ -175,7 +175,7 @@ const FreeQuoteModal = () => {
           )}
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
             {/* Honeypot field */}
             <input
               type="text"
@@ -193,7 +193,7 @@ const FreeQuoteModal = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
+              className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
               placeholder="Your Name"
             />
 
@@ -203,7 +203,7 @@ const FreeQuoteModal = () => {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
+              className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
               placeholder="Phone Number"
             />
 
@@ -213,13 +213,13 @@ const FreeQuoteModal = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
+              className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
               placeholder="Email Address"
             />
 
             <button
               type="submit"
-              className="w-full bg-white text-[#168530] border-2 border-[#168530] hover:bg-[#168530] hover:text-white py-4 rounded-2xl font-semibold transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 animate-glow-button disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-white text-[#168530] border-2 border-[#168530] hover:bg-[#168530] hover:text-white py-3 sm:py-4 rounded-2xl font-semibold text-sm sm:text-base transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 animate-glow-button disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Claim Free Inspection'}
@@ -227,17 +227,17 @@ const FreeQuoteModal = () => {
           </form>
 
           {/* Call option */}
-          <div className="mt-4 text-center">
-            <p className="text-xs text-gray-500 mb-2">Or call us directly:</p>
+          <div className="mt-3 sm:mt-4 text-center">
+            <p className="text-xs text-gray-500 mb-1 sm:mb-2">Or call us directly:</p>
             <a
               href="tel:6138079255"
-              className="text-primary-500 font-semibold hover:underline"
+              className="text-primary-500 font-semibold hover:underline text-sm sm:text-base"
             >
               (613) 807-9255
             </a>
           </div>
 
-          <p className="text-xs text-gray-400 text-center mt-4">
+          <p className="text-xs text-gray-400 text-center mt-3 sm:mt-4">
             Limited time offer. No spam, guaranteed.
           </p>
         </div>

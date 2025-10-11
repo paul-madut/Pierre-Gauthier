@@ -1,26 +1,30 @@
 'use client'
 
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { PhoneIcon, EmailIcon, LocationIcon } from '../ui/Icons'
 
 const Footer = () => {
+  const t = useTranslations('footer')
+  const tNav = useTranslations('nav')
+  const tCommon = useTranslations('common')
   const currentYear = new Date().getFullYear()
 
   const quickLinks = [
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'FAQ', href: '#faq' }
+    { name: tNav('howItWorks'), href: '#how-it-works' },
+    { name: tNav('features'), href: '#features' },
+    { name: tNav('pricing'), href: '#pricing' },
+    { name: tNav('testimonials'), href: '#testimonials' },
+    { name: tNav('faq'), href: '#faq' }
   ]
 
   const services = [
-    'Attic Insulation',
-    'Basement Insulation',
-    'Air Sealing',
-    'Ventilation Services',
-    'Energy Audits',
-    'Rebate Assistance'
+    t('services.atticInsulation'),
+    t('services.basementInsulation'),
+    t('services.airSealing'),
+    t('services.ventilation'),
+    t('services.energyAudits'),
+    t('services.rebateAssistance')
   ]
 
   const serviceAreas = [
@@ -38,7 +42,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main footer content */}
-      <div className="max-w-7xl mx-auto container-padding py-16">
+      <div className="max-w-[1400px] mx-auto container-padding py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -50,8 +54,7 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Professional attic insulation services for Ottawa homes.
-              Trusted by Ottawa families for energy savings and comfort.
+              {t('companyDescription')}
             </p>
 
             {/* Contact info */}
@@ -79,7 +82,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('quickLinks')}</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -93,12 +96,12 @@ const Footer = () => {
               ))}
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About Us
+                  {tNav('aboutUs')}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
+                  {tNav('contact')}
                 </Link>
               </li>
             </ul>
@@ -106,7 +109,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Our Services</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('ourServices')}</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
@@ -118,7 +121,7 @@ const Footer = () => {
 
           {/* Service Areas */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Service Areas</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('serviceAreas')}</h3>
             <ul className="space-y-2">
               {serviceAreas.map((area) => (
                 <li key={area}>
@@ -127,7 +130,7 @@ const Footer = () => {
               ))}
             </ul>
             <p className="text-sm text-gray-400 mt-4">
-              + 30km radius from Ottawa
+              {t('radiusNote')}
             </p>
           </div>
         </div>
@@ -136,23 +139,23 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-12">
           <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl p-8 text-center">
             <h3 className="text-2xl md:text-3xl font-light mb-4">
-              Ready to Save on Energy Costs?
+              {t('ctaTitle')}
             </h3>
             <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-              Join 2,500+ Ottawa families who've improved their home comfort and reduced energy bills
+              {t('ctaSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => scrollToSection('#contact')}
                 className="text-white px-8 py-3 rounded-lg font-semibold bg-[#168d30] hover:bg-[#158529] hover:shadow-lg hover:shadow-green-600/25 transition-all duration-300 transform hover:scale-105 glow-important"
               >
-                Get Free Quote
+                {t('getFreeQuote')}
               </button>
               <a
                 href="tel:6138079255"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 hover:border-white/80 hover:shadow-md transition-all duration-300 transform hover:scale-105"
               >
-                Call (613) 807-9255
+                {t('callPhone')}
               </a>
             </div>
           </div>
@@ -161,21 +164,21 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto container-padding py-6">
+        <div className="max-w-[1400px] mx-auto container-padding py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
-              © {currentYear} Veritas Insulation. All rights reserved.
+              {t('copyright', { year: currentYear })}
             </div>
 
             <div className="flex items-center space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
+                {t('privacyPolicy')}
               </Link>
               <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Service
+                {t('termsOfService')}
               </Link>
               <div className="flex items-center space-x-2">
-                <span className="text-gray-400">Licensed & Insured</span>
+                <span className="text-gray-400">{t('licensedInsured')}</span>
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               </div>
             </div>

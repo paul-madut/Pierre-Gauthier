@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "howItWorks": "How It Works",
+    "features": "Features",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "getFreeQuote": "Get Free Quote",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Stop Wasting Heat.",
+    "titleHighlight": "Save Hundreds",
+    "titleEnd": "on Your Energy Bill.",
+    "subtitle": "Premium attic insulation solutions that deliver lasting comfort, energy savings, and a quieter home for your family.",
+    "ctaPrimary": "Get a Free Assessment",
+    "ctaSecondary": "How It Works",
+    "formTitle": "Get Your Free Quote",
+    "formSubtitle": "Call us at {phone} or fill out the form below",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "emailAddress": "Email Address",
+    "submitButton": "Get Free Quote Now",
+    "submitting": "Sending...",
+    "successMessage": "✓ Thank you! We'll contact you within 24 hours on weekdays to schedule your free assessment.",
+    "errorMessage": "✗ Something went wrong. Please try again or call us directly.",
+    "disclaimer": "We'll contact you within 24 hours on weekdays. No spam, guaranteed.",
+    "responseTime": "Response Time",
+    "responseTimeValue": "Weekdays 24 hours",
+    "freeAssessment": "Free Assessment",
+    "freeAssessmentValue": "No obligation"
+  },
+  "testimonials": {
+    "title": "Real Results from Real Customers",
+    "subtitle": "See how we've helped Ottawa families save money and improve their home comfort",
+    "trustIndicators": {
+      "satisfaction": "Customer Satisfaction",
+      "rating": "Average Rating",
+      "complaints": "Unresolved Complaints"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Our proven 3-step process ensures professional results and lasting comfort",
+    "step1": {
+      "title": "Free Home Assessment",
+      "description": "Our certified technicians inspect your attic and recommend the optimal R-value for maximum energy efficiency.",
+      "benefit": "Personalized solution for your specific home"
+    },
+    "step2": {
+      "title": "Professional Installation",
+      "description": "Fast, clean installation by our certified crew using industry-leading materials and mess-controlled techniques.",
+      "benefit": "Minimal disruption to your daily routine"
+    },
+    "step3": {
+      "title": "Energy Savings & Warranty",
+      "description": "Performance verification and comprehensive warranty ensuring your comfort and savings for years to come.",
+      "benefit": "Guaranteed results with lifetime warranty"
+    }
+  },
+  "features": {
+    "title": "Why Choose Veritas",
+    "subtitle": "Premium materials, proven techniques, and unmatched service quality",
+    "feature1": {
+      "title": "High R-Value Materials",
+      "description": "Best-in-class thermal performance with premium insulation materials that exceed industry standards.",
+      "benefits": ["R-60+ thermal resistance", "Energy Star certified materials", "Fire-resistant options available"]
+    },
+    "feature2": {
+      "title": "Air-Sealing & Ventilation",
+      "description": "Complete air-sealing services that improve comfort, indoor air quality, and prevent energy loss.",
+      "benefits": ["Drafts elimination", "Moisture control", "Improved air quality"]
+    },
+    "feature3": {
+      "title": "Eco-Friendly Options",
+      "description": "Sustainable insulation solutions using recycled materials and low-VOC options for healthier homes.",
+      "benefits": ["80% recycled content", "Zero harmful chemicals", "Carbon footprint reduction"]
+    },
+    "feature4": {
+      "title": "Rebate Assistance",
+      "description": "We help you navigate and claim all available government and local utility rebates to maximize savings.",
+      "benefits": ["Up to $5,000 in rebates", "Application assistance", "Maximum savings guaranteed"]
+    },
+    "ctaTitle": "Ready to Start Saving Energy?",
+    "ctaSubtitle": "Get a personalized assessment and quote for your home in 24 hours",
+    "ctaButton": "Schedule Free Assessment"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "paragraph1": "At Veritas Insulation, we believe every family deserves a comfortable, energy-efficient home that protects what matters most.",
+    "paragraph2": "For over a decade, we've been transforming Ottawa homes with premium insulation solutions that deliver real results: lower energy bills, improved comfort, and peace of mind knowing your home is properly protected.",
+    "paragraph3": "We're not just about insulation—we're about creating healthier, more sustainable living spaces while helping families save money for the things that truly matter.",
+    "value1Title": "Trust",
+    "value1Description": "Transparent pricing, honest assessments",
+    "value2Title": "Quality",
+    "value2Description": "Premium materials, expert installation",
+    "value3Title": "Care",
+    "value3Description": "Your family's comfort is our priority",
+    "averageSavings": "Average Savings",
+    "roi": "ROI"
+  },
+  "pricing": {
+    "title": "Why Our Pricing is Transparent",
+    "subtitle": "Experience honest, straightforward pricing with no surprises.",
+    "transparentPricing1": {
+      "title": "Thorough Assessment",
+      "description": "Hands-on attic insulation assessment with detailed home visit and audit",
+      "benefits": ["Complete home energy evaluation", "Detailed inspection report", "Professional recommendations"]
+    },
+    "transparentPricing2": {
+      "title": "No Hidden Fees",
+      "description": "All factors clearly explained—materials, labor, and additional services",
+      "benefits": ["Transparent cost breakdown", "No surprise charges", "Written estimates provided"]
+    },
+    "transparentPricing3": {
+      "title": "Flexible Payment",
+      "description": "Multiple payment options available to suit your needs",
+      "benefits": ["Multiple payment methods", "Financing options available", "Rebate assistance included"]
+    },
+    "paymentMethodsTitle": "Payment Methods Accepted",
+    "paymentMethods": {
+      "cash": "Cash",
+      "check": "Check",
+      "etransfer": "E-transfer",
+      "creditCard": "Credit Card",
+      "debitCard": "Debit Card",
+      "online": "Stripe/PayPal",
+      "plan": "Payment plan agreement (arranged separately)"
+    },
+    "factorsTitle": "Key Pricing Factors",
+    "factorsSubtitle": "Your quote is calculated based on these primary factors for accurate, fair pricing",
+    "factor1": {
+      "title": "Attic Size & Access",
+      "description": "Square footage and accessibility determine material needs and labor complexity",
+      "details": ["Attic square footage", "Access difficulty", "Ceiling height"]
+    },
+    "factor2": {
+      "title": "Insulation Type & R-Value",
+      "description": "Material choice and thickness requirements based on your specific needs",
+      "details": ["Material grade", "R-value target", "Insulation depth"]
+    },
+    "factor3": {
+      "title": "Additional Services",
+      "description": "Extra work that may be needed for optimal insulation performance",
+      "details": ["Air sealing", "Ventilation upgrades", "Old insulation removal"]
+    },
+    "ctaTitle": "Ready for Your Custom Quote?",
+    "ctaSubtitle": "Get your honest, detailed quote with no hidden fees or surprises",
+    "ctaButton": "Get Your Custom Quote"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Get answers to common questions about attic insulation",
+    "questions": [
+      {
+        "q": "How long does attic insulation installation take?",
+        "a": "Most residential installations are completed in 4-8 hours, depending on the size of your home. We work efficiently to minimize disruption to your daily routine."
+      },
+      {
+        "q": "What R-value insulation do I need in Ottawa?",
+        "a": "For Ottawa's climate, we recommend R-60 to R-70 for optimal energy efficiency. Our assessment will determine the exact R-value needed for your specific home and current insulation levels."
+      },
+      {
+        "q": "Will insulation installation create a mess in my home?",
+        "a": "No. We use protective coverings throughout your home and employ dust-controlled installation methods. Our team performs complete cleanup, leaving your home cleaner than we found it."
+      },
+      {
+        "q": "What rebates are available for insulation upgrades?",
+        "a": "Ontario residents can receive up to $5,000 in combined rebates from federal, provincial, and utility programs. We handle all paperwork and ensure you receive maximum available rebates."
+      },
+      {
+        "q": "How much will I save on energy bills?",
+        "a": "Most customers see 25-40% reduction in heating and cooling costs. The exact savings depend on your home's current insulation, size, and energy usage patterns."
+      },
+      {
+        "q": "Do you offer warranties on your work?",
+        "a": "Yes. We provide comprehensive warranties: 10 years on Standard installations and lifetime warranty on Premium packages. Materials also come with manufacturer warranties."
+      },
+      {
+        "q": "Can you insulate other areas besides the attic?",
+        "a": "Absolutely. We also insulate basements, crawl spaces, walls, and rim joists. Our assessment will identify all areas where improved insulation can benefit your home."
+      },
+      {
+        "q": "Is blown-in insulation better than batt insulation?",
+        "a": "For attics, blown-in insulation is superior as it fills gaps and irregular spaces completely, providing better thermal performance and air sealing compared to traditional batts."
+      }
+    ],
+    "stillHaveQuestionsTitle": "Still Have Questions?",
+    "stillHaveQuestionsSubtitle": "Our insulation experts are ready to provide personalized answers",
+    "getConsultation": "Get Expert Consultation",
+    "callNow": "Call (613) 807-9255"
+  },
+  "contact": {
+    "title": "Get Your Free Assessment",
+    "subtitle": "Ready to start saving on energy costs? Get a personalized quote within 24 hours on weekdays.",
+    "formTitle": "Request Free Quote",
+    "successMessage": "✓ Thank you! We'll contact you within 24 hours on weekdays to schedule your free assessment.",
+    "errorMessage": "✗ Something went wrong. Please try again or call us directly.",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "homeSize": "Home Size (sq ft)",
+    "homeAddress": "Home Address",
+    "additionalDetails": "Additional Details",
+    "selectSize": "Select size",
+    "under1000": "Under 1,000 sq ft",
+    "1000to1500": "1,000 - 1,500 sq ft",
+    "1500to2000": "1,500 - 2,000 sq ft",
+    "2000to3000": "2,000 - 3,000 sq ft",
+    "over3000": "Over 3,000 sq ft",
+    "namePlaceholder": "John Smith",
+    "emailPlaceholder": "john@example.com",
+    "phonePlaceholder": "(613) 555-0123",
+    "addressPlaceholder": "123 Main St, Ottawa, ON",
+    "messagePlaceholder": "Tell us about your insulation goals, current issues, or preferred timing...",
+    "submitButton": "Get Free Quote",
+    "submitting": "Sending...",
+    "disclaimer": "By submitting this form, you agree to be contacted about our services. We respect your privacy and never share your information.",
+    "contactInfoTitle": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "serviceArea": "Service Area",
+    "serviceAreaValue": "Ottawa & Surrounding Areas",
+    "serviceAreasTitle": "Service Areas",
+    "dontSeeArea": "Don't see your area? {link} - we may still be able to help!",
+    "callUs": "Call us",
+    "needHelpTitle": "Need Immediate Help?",
+    "needHelpSubtitle": "For urgent insulation issues or emergency consultations",
+    "callNowButton": "Call Now"
+  },
+  "footer": {
+    "companyDescription": "Professional attic insulation services for Ottawa homes. Trusted by Ottawa families for energy savings and comfort.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "serviceAreas": "Service Areas",
+    "services": {
+      "atticInsulation": "Attic Insulation",
+      "basementInsulation": "Basement Insulation",
+      "airSealing": "Air Sealing",
+      "ventilation": "Ventilation Services",
+      "energyAudits": "Energy Audits",
+      "rebateAssistance": "Rebate Assistance"
+    },
+    "radiusNote": "+ 30km radius from Ottawa",
+    "ctaTitle": "Ready to Save on Energy Costs?",
+    "ctaSubtitle": "Join 2,500+ Ottawa families who've improved their home comfort and reduced energy bills",
+    "getFreeQuote": "Get Free Quote",
+    "callPhone": "Call (613) 807-9255",
+    "copyright": "© {year} Veritas Insulation. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "licensedInsured": "Licensed & Insured"
+  },
+  "common": {
+    "phone": "(613) 807-9255",
+    "email": "pierre@veritasinsulation.com",
+    "companyName": "Veritas Insulation"
+  }
+}

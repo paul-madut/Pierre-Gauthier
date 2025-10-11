@@ -1,9 +1,9 @@
 "use client"
-import Navigation from '../../components/ui/Navigation'
-import Footer from '../../components/sections/Footer'
-import Contact from '../../components/sections/Contact'
-import { Card, CardContent } from '../../components/ui/Card'
-import { PhoneIcon, EmailIcon, LocationIcon, CheckIcon } from '../../components/ui/Icons'
+import Navigation from '@/components/ui/Navigation'
+import Footer from '@/components/sections/Footer'
+import { Contact } from '@/components/sections/Contact'
+import { Card, CardContent } from '@/components/ui/Card'
+import { PhoneIcon, EmailIcon, LocationIcon, CheckIcon } from '@/components/ui/Icons'
 
 export default function ContactPage() {
   const serviceAreas = [
@@ -54,7 +54,7 @@ export default function ContactPage() {
       <main className="pt-16">
         {/* Hero Section */}
         <section className="section-padding bg-gradient-to-br from-primary-50 to-white">
-          <div className="max-w-7xl mx-auto container-padding">
+          <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
                 Get Your{' '}
@@ -118,7 +118,7 @@ export default function ContactPage() {
 
         {/* Service Areas */}
         <section id="service-areas" className="section-padding bg-gray-50">
-          <div className="max-w-7xl mx-auto container-padding">
+          <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
                 Service Areas
