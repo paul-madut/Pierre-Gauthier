@@ -1,7 +1,7 @@
 "use client"
 import Navigation from '@/components/ui/Navigation'
 import Footer from '@/components/sections/Footer'
-import { Contact } from '@/components/sections/Contact'
+import Contact from '@/components/sections/Contact'
 import { Card, CardContent } from '@/components/ui/Card'
 import { PhoneIcon, EmailIcon, LocationIcon, CheckIcon } from '@/components/ui/Icons'
 

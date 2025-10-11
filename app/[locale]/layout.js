@@ -27,9 +27,13 @@ export async function generateMetadata({ params }) {
       ? 'isolation grenier Ottawa, entreprise isolation Ottawa, économies énergie, isolation valeur R, isolation soufflée, scellage air'
       : 'attic insulation Ottawa, insulation company Ottawa, energy savings, R-value insulation, blown-in insulation, air sealing',
     author: 'Veritas Insulation',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow'
   }
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default async function LocaleLayout({ children, params }) {

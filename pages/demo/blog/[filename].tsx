@@ -62,8 +62,12 @@ export const getStaticProps = async ({ params }) => {
     query = res.query
     data = res.data
     variables = res.variables
-  } catch {
-    // swallow errors related to document creation
+  } catch (error) {
+    console.error(`Error fetching post ${params.filename}:`, error)
+    // Return notFound to skip this page during build
+    return {
+      notFound: true,
+    }
   }
 
   return {

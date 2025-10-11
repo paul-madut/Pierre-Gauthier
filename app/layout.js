@@ -16,8 +16,12 @@ export const metadata = {
   description: "Professional attic insulation services in Ottawa. Save 25-40% on energy bills with premium insulation materials. Free quotes, lifetime warranty, rebate assistance.",
   keywords: "attic insulation Ottawa, insulation company Ottawa, energy savings, R-value insulation, blown-in insulation, air sealing",
   author: "Veritas Insulation",
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow"
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {

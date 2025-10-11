@@ -6,7 +6,7 @@ import { Card, CardContent } from '../ui/Card'
 import StyledButton from '../ui/StyledButton'
 import { PhoneIcon, EmailIcon, LocationIcon } from '../ui/Icons'
 
-export  const Contact = () => {
+const Contact = () => {
   const t = useTranslations('contact')
   const tCommon = useTranslations('common')
 
