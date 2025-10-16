@@ -113,23 +113,11 @@ const Testimonials = () => {
                 <div key={index} className="w-full flex-shrink-0">
                   <Card variant="glass" className="mx-4">
                     <CardContent className="p-8 md:p-12">
-                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                        {/* Image */}
-                        <div className="lg:col-span-1">
-                          <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden">
-                            <Image
-                              src={testimonial.image}
-                              alt={`${testimonial.name} testimonial`}
-                              fill
-                              style={{ objectFit: 'cover' }}
-                            />
-                          </div>
-                        </div>
-
+                      <div className="grid grid-cols-1 gap-8 items-center">
                         {/* Content */}
-                        <div className="lg:col-span-2 text-center lg:text-left">
+                        <div className="text-center">
                           {/* Stars */}
-                          <div className="flex justify-center lg:justify-start mb-4">
+                          <div className="flex justify-center mb-4">
                             {[...Array(testimonial.rating)].map((_, i) => (
                               <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
                             ))}
@@ -199,13 +187,9 @@ const Testimonials = () => {
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 text-center max-w-2xl mx-auto">
           <div>
-            <div className="text-3xl font-bold text-primary-500 mb-2">98%</div>
-            <div className="text-gray-700">{t('trustIndicators.satisfaction')}</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary-500 mb-2">4.9/5</div>
+            <div className="text-3xl font-bold text-primary-500 mb-2">5.0/5</div>
             <div className="text-gray-700">{t('trustIndicators.rating')}</div>
           </div>
           <div>

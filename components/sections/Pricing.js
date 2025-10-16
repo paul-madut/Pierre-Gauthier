@@ -52,22 +52,6 @@ const Pricing = () => {
         }
       )
 
-      // Payment methods animation
-      gsap.fromTo('.payment-methods',
-        { y: 60, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.7,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: '.payment-methods',
-            start: 'top 80%',
-            toggleActions: 'play none none reverse'
-          }
-        }
-      )
-
       // Pricing factors header animation
       gsap.fromTo('.pricing-factors-header',
         { y: 50, opacity: 0 },
@@ -144,16 +128,6 @@ const Pricing = () => {
     }
   ]
 
-  const paymentMethods = [
-    t('paymentMethods.cash'),
-    t('paymentMethods.check'),
-    t('paymentMethods.etransfer'),
-    t('paymentMethods.creditCard'),
-    t('paymentMethods.debitCard'),
-    t('paymentMethods.online'),
-    t('paymentMethods.plan')
-  ]
-
   const scrollToContact = () => {
     const contact = document.querySelector('#contact')
     if (contact) {
@@ -211,22 +185,6 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* Payment Methods Section */}
-        <Card variant="elevated" className="p-8 mb-16 payment-methods">
-          <CardContent className="p-0">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
-              {t('paymentMethodsTitle')}
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {paymentMethods.map((method, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <CheckIcon className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">{method}</span>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
 
         {/* Pricing Factors Section */}
         <div className="text-center mb-16 pricing-factors-header">

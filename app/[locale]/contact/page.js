@@ -17,7 +17,7 @@ export default function ContactPage() {
       icon: PhoneIcon,
       title: 'Call or Text',
       details: '(613) 807-9255',
-      description: 'Available 7 days a week, 8 AM - 8 PM',
+      description: 'Available 5 days a week',
       action: 'tel:6138079255',
       actionText: 'Call Now'
     },
@@ -25,7 +25,7 @@ export default function ContactPage() {
       icon: EmailIcon,
       title: 'Email Us',
       details: 'pierre@veritasinsulation.com',
-      description: 'We respond within 4 hours',
+      description: 'We respond within 24 hours on weekdays',
       action: 'mailto:pierre@veritasinsulation.com',
       actionText: 'Send Email'
     },
@@ -228,7 +228,7 @@ export default function ContactPage() {
               </a>
             </div>
             <p className="text-sm text-gray-600 mt-4">
-              Available 7 days a week for emergency consultations
+              Available 5 days a week - 24 hour response time on weekdays
             </p>
           </div>
         </section>

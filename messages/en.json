@@ -57,8 +57,8 @@
     },
     "step3": {
       "title": "Energy Savings & Warranty",
-      "description": "Performance verification and comprehensive warranty ensuring your comfort and savings for years to come.",
-      "benefit": "Guaranteed results with lifetime warranty"
+      "description": "Performance verification with limited lifetime warranty on materials and installation quality warranty ensuring your comfort and savings for years to come.",
+      "benefit": "Guaranteed results with warranty protection"
     }
   },
   "features": {
@@ -173,11 +173,11 @@
       },
       {
         "q": "How much will I save on energy bills?",
-        "a": "Most customers see 25-40% reduction in heating and cooling costs. The exact savings depend on your home's current insulation, size, and energy usage patterns."
+        "a": "Most customers see up to 40% reduction in heating and cooling costs. The exact savings depend on your home's current insulation, size, and energy usage patterns."
       },
       {
         "q": "Do you offer warranties on your work?",
-        "a": "Yes. We provide comprehensive warranties: 10 years on Standard installations and lifetime warranty on Premium packages. Materials also come with manufacturer warranties."
+        "a": "Yes. Materials come with a limited lifetime warranty from the manufacturer, and I personally provide a warranty on the quality of my installation work."
       },
       {
         "q": "Can you insulate other areas besides the attic?",
@@ -246,7 +246,7 @@
     },
     "radiusNote": "+ 30km radius from Ottawa",
     "ctaTitle": "Ready to Save on Energy Costs?",
-    "ctaSubtitle": "Join 2,500+ Ottawa families who've improved their home comfort and reduced energy bills",
+    "ctaSubtitle": "Join Ottawa families who've improved their home comfort and reduced energy bills",
     "getFreeQuote": "Get Free Quote",
     "callPhone": "Call (613) 807-9255",
     "copyright": "© {year} Veritas Insulation. All rights reserved.",

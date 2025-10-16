@@ -72,14 +72,7 @@ const Mission = () => {
               </div>
 
               {/* Floating stats */}
-              <div className="absolute -top-6 -left-6 bg-white rounded-2xl p-6 shadow-xl animate-float">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-1">35%</div>
-                  <div className="text-sm text-gray-700">{t('averageSavings')}</div>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl animate-float" style={{ animationDelay: '1.5s' }}>
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl animate-float">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary-500 mb-1">+100%</div>
                   <div className="text-sm text-gray-700">{t('roi')}</div>

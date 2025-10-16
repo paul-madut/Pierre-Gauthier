@@ -73,7 +73,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fef2f2] pt-20 sm:pt-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#f0f9f4] pt-20 sm:pt-24">
       {/* Background Image Div with content inside */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] h-[75%] z-0">
       </div>
