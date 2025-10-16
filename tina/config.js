@@ -70,6 +70,69 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "testimonial",
+        label: "Testimonials",
+        path: "content/testimonials",
+        format: "md",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Customer Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "location",
+            label: "Location",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "quote",
+            label: "Quote",
+            required: true,
+            ui: {
+              component: "textarea",
+            },
+          },
+          {
+            type: "string",
+            name: "metric",
+            label: "Key Metric/Result",
+            required: true,
+            description: "The specific result or metric achieved (e.g., 'Reduced heating costs by 28%')",
+          },
+          {
+            type: "number",
+            name: "rating",
+            label: "Rating (1-5)",
+            required: true,
+            ui: {
+              validate: (value) => {
+                if (value < 1 || value > 5) {
+                  return "Rating must be between 1 and 5";
+                }
+              },
+            },
+          },
+          {
+            type: "number",
+            name: "order",
+            label: "Display Order",
+            required: true,
+            description: "Lower numbers appear first (e.g., 1, 2, 3...)",
+          },
+          {
+            type: "boolean",
+            name: "featured",
+            label: "Featured",
+            description: "Show this testimonial prominently",
+          },
+        ],
+      },
     ],
   },
 });

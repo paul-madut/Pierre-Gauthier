@@ -1,66 +1,19 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Card, CardContent } from '../ui/Card'
 import { StarIcon } from '../ui/Icons'
 
-const Testimonials = () => {
+const Testimonials = ({ testimonials = [] }) => {
   const t = useTranslations('testimonials')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
 
-  const testimonials = [
-    {
-      name: 'Sara M.',
-      location: 'Kingston',
-      quote: 'After Veritas Insulation completed our attic, our January heating bill dropped 28% — we saved $310 last winter. Install was clean and fast.',
-      metric: 'Reduced winter heating costs by 28% — saved $320/year',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b5e6?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Marcus T.',
-      location: 'Ottawa',
-      quote: 'Our house is noticeably warmer and quieter. The crew sealed the attic in a day and the tech explained everything.',
-      metric: 'Temperature consistency improved by 6°C',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Jennifer & David L.',
-      location: 'Kanata',
-      quote: 'Best investment we\'ve made in our home. The difference in comfort is immediate and our energy bills are significantly lower.',
-      metric: 'Energy bills reduced by 35% annually',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Robert K.',
-      location: 'Nepean',
-      quote: 'Professional team, fair pricing, and incredible results. Our home stays comfortable year-round now.',
-      metric: 'Eliminated hot/cold spots throughout home',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Michelle P.',
-      location: 'Barrhaven',
-      quote: 'They helped us get $3,200 in rebates and the work was completed exactly as promised. Highly recommend!',
-      metric: 'Received $3,200 in government rebates',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Tom & Lisa H.',
-      location: 'Orleans',
-      quote: 'Veritas delivered on every promise. Our home is more comfortable and our monthly bills are way down.',
-      metric: 'Monthly energy costs reduced by $87',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?w=400&h=400&fit=crop&crop=face'
-    }
-  ]
+  // If no testimonials, don't render the section
+  if (!testimonials || testimonials.length === 0) {
+    return null
+  }
 
   // Auto-scroll functionality
   useEffect(() => {
