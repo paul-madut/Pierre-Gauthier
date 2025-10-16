@@ -142,7 +142,7 @@ const Testimonials = ({ testimonials = [] }) => {
         {/* Trust indicators */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 text-center max-w-2xl mx-auto">
           <div>
-            <div className="text-3xl font-bold text-primary-500 mb-2">5.0/5</div>
+            <div className="text-3xl font-bold text-primary-500 mb-2">5/5</div>
             <div className="text-gray-700">{t('trustIndicators.rating')}</div>
           </div>
           <div>
