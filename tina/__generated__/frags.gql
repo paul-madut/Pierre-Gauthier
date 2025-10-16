@@ -1,0 +1,20 @@
+fragment PostParts on Post {
+  __typename
+  title
+  date
+  author
+  excerpt
+  featuredImage
+  body
+}
+
+fragment TestimonialParts on Testimonial {
+  __typename
+  name
+  location
+  quote
+  metric
+  rating
+  order
+  featured
+}
