@@ -40,10 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# tina cms
-/tina/__generated__
-/public/admin
-
 # netlify
 /.netlify
 
