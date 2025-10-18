@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { locales } from '../../i18n'
+import StickyBanner from '../../components/ui/StickyBanner'
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
@@ -50,6 +51,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <NextIntlClientProvider messages={messages}>
       {children}
+      <StickyBanner />
     </NextIntlClientProvider>
   )
 }

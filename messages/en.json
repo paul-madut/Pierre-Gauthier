@@ -258,5 +258,9 @@
     "phone": "(613) 807-9255",
     "email": "pierre@veritasinsulation.com",
     "companyName": "Veritas Insulation"
+  },
+  "banner": {
+    "message": "This website is still under construction. Some features may be unavailable.",
+    "close": "Close banner"
   }
 }
