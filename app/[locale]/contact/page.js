@@ -2,8 +2,9 @@
 import Navigation from '@/components/ui/Navigation'
 import Footer from '@/components/sections/Footer'
 import Contact from '@/components/sections/Contact'
+import WhyChooseVeritas from '@/components/sections/WhyChooseVeritas'
 import { Card, CardContent } from '@/components/ui/Card'
-import { PhoneIcon, EmailIcon, LocationIcon, CheckIcon } from '@/components/ui/Icons'
+import { PhoneIcon, EmailIcon, LocationIcon } from '@/components/ui/Icons'
 
 export default function ContactPage() {
   const serviceAreas = [
@@ -37,15 +38,6 @@ export default function ContactPage() {
       action: '#service-areas',
       actionText: 'View Areas'
     }
-  ]
-
-  const benefits = [
-    'Free, no-obligation assessment',
-    'Same-day quotes available',
-    'Licensed & insured technicians',
-    'Transparent, upfront pricing',
-    'Rebate assistance included',
-    'Lifetime warranty options'
   ]
 
   return (
@@ -94,24 +86,11 @@ export default function ContactPage() {
               ))}
             </div>
 
-            {/* Why Choose Us */}
-            <Card variant="glass" className="mb-16">
-              <CardContent className="p-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
-                  Why Ottawa Families Choose Veritas
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <CheckIcon className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </section>
+
+        {/* Why Choose Us - Bento Grid */}
+        <WhyChooseVeritas />
 
         {/* Main Contact Section */}
         <Contact />

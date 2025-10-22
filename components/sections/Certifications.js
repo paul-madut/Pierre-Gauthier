@@ -64,18 +64,14 @@ const Certifications = () => {
         </div>
 
         {/* Trust indicators */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-2xl mx-auto">
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-500 mb-2">10+</div>
-            <div className="text-gray-700">Years Experience</div>
+            <div className="text-3xl font-bold text-primary-500 mb-2">6</div>
+            <div className="text-gray-700">Five Star Reviews</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-500 mb-2">2,500+</div>
+            <div className="text-3xl font-bold text-primary-500 mb-2">2</div>
             <div className="text-gray-700">Homes Insulated</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary-500 mb-2">4.9★</div>
-            <div className="text-gray-700">Customer Rating</div>
           </div>
         </div>
       </div>

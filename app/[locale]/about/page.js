@@ -5,6 +5,7 @@ import Footer from '@/components/sections/Footer'
 import { Card, CardContent } from '@/components/ui/Card'
 import StyledButton from '@/components/ui/StyledButton'
 import { CheckIcon, ShieldIcon, StarIcon } from '@/components/ui/Icons'
+import WhyChooseVeritas from '@/components/sections/WhyChooseVeritas'
 
 export default function About() {
   const teamMembers = [
@@ -12,22 +13,19 @@ export default function About() {
       name: 'Pierre Gauthier',
       role: 'Founder & Lead Insulation Specialist',
       image: '/team/pierre-gauthier.jpg',
-      bio: 'With over 12 years in the insulation industry, Pierre founded Veritas Insulation to bring honest, high-quality service to Ottawa families.',
-      certifications: ['Energy Advisor Certified', 'WSIB Safety Trained', 'Insulation Contractors Association Member']
+      bio: 'Pierre founded Veritas Insulation to bring honest, high-quality service to Ottawa families.'
     },
     {
       name: 'Mike Thompson',
       role: 'Senior Installation Technician',
       image: '/team/mike-thompson.jpg',
-      bio: 'Mike has been perfecting insulation installation techniques for 8 years, ensuring every job meets our exacting standards.',
-      certifications: ['Advanced Air Sealing Certified', 'Fall Protection Trained', 'Quality Control Specialist']
+      bio: 'Mike has been perfecting insulation installation techniques for 8 years, ensuring every job meets our exacting standards.'
     },
     {
       name: 'Sarah Williams',
       role: 'Customer Experience Manager',
       image: '/team/sarah-williams.jpg',
-      bio: 'Sarah ensures every customer has a smooth experience from initial consultation through project completion.',
-      certifications: ['Customer Service Excellence', 'Energy Efficiency Specialist', 'Rebate Program Expert']
+      bio: 'Sarah ensures every customer has a smooth experience from initial consultation through project completion.'
     }
   ]
 
@@ -87,17 +85,17 @@ export default function About() {
                   <span className="text-primary-500 font-medium">Veritas</span>
                 </h1>
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  For over a decade, we've been Ottawa's trusted insulation specialists,
+                  Ottawa's trusted insulation specialists,
                   helping families create more comfortable, energy-efficient homes.
                 </p>
-                <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-500 mb-1">50+</div>
-                    <div className="text-sm text-gray-600">Positive Reviews</div>
+                    <div className="text-3xl font-bold text-primary-500 mb-1">6</div>
+                    <div className="text-sm text-gray-600">Five Star Reviews</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-500 mb-1">4.9★</div>
-                    <div className="text-sm text-gray-600">Average Rating</div>
+                    <div className="text-3xl font-bold text-primary-500 mb-1">2</div>
+                    <div className="text-sm text-gray-600">Homes Insulated</div>
                   </div>
                 </div>
                 <StyledButton
@@ -146,20 +144,19 @@ export default function About() {
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Founded by Pierre Gauthier in 2013, Veritas began as a response to the poor
+                Founded by Pierre Gauthier, Veritas began as a response to the poor
                 service and inflated pricing he witnessed in the industry. Pierre's vision
                 was clear: provide transparent pricing, use premium materials, and treat
                 every home as if it were his own.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                What started as a one-person operation has grown into Ottawa's most trusted
-                insulation company, but our core values remain unchanged. We believe in
+                As a new insulation company, our core values guide everything we do. We believe in
                 honest assessments, fair pricing, and workmanship that stands the test of time.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                Today, we're proud to have helped over 2,500 families reduce their energy
+                We're proud to have helped families reduce their energy
                 costs while improving their home comfort. Every installation, every customer
                 interaction, and every warranty we honor reflects our commitment to being
                 the insulation company Ottawa families can trust.
@@ -200,8 +197,11 @@ export default function About() {
           </div>
         </section>
 
+        {/* Why Choose Veritas - Bento Grid Section */}
+        <WhyChooseVeritas />
+
         {/* Certifications Section */}
-        <section className="section-padding bg-white">
+        {/* <section className="section-padding bg-white">
           <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
@@ -232,7 +232,6 @@ export default function About() {
               ))}
             </div>
 
-            {/* Trust indicators */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary-500 mb-2">10+</div>
@@ -248,7 +247,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Team Section */}
         <section className="section-padding bg-white">
@@ -280,17 +279,9 @@ export default function About() {
                     <p className="text-primary-500 font-medium mb-4">
                       {member.role}
                     </p>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed">
                       {member.bio}
                     </p>
-                    <div className="space-y-2">
-                      {member.certifications.map((cert, certIndex) => (
-                        <div key={certIndex} className="flex items-center justify-center space-x-2">
-                          <CheckIcon className="w-4 h-4 text-green-500 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">{cert}</span>
-                        </div>
-                      ))}
-                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -299,7 +290,7 @@ export default function About() {
         </section>
 
         {/* Timeline */}
-        <section className="section-padding bg-gray-50">
+        {/* <section className="section-padding bg-gray-50">
           <div className="max-w-4xl mx-auto container-padding">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
@@ -311,10 +302,9 @@ export default function About() {
             </div>
 
             <div className="relative">
-              {/* Timeline line
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div> */}
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
 
-              {/* <div className="space-y-8">
+              <div className="space-y-8">
                 {milestones.map((milestone, index) => (
                   <div key={milestone.year} className="relative flex items-center">
                     <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">
@@ -325,10 +315,10 @@ export default function About() {
                     </div>
                   </div>
                 ))}
-              </div> */}
+              </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="section-padding bg-primary-500">
