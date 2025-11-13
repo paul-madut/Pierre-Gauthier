@@ -82,8 +82,8 @@ const Testimonials = ({ testimonials = [] }) => {
                           </blockquote>
 
                           {/* Metric */}
-                          <div className="bg-green-50 rounded-lg p-4 mb-6">
-                            <p className="text-green-800 font-semibold">
+                          <div className="bg-[#e0f2ff] rounded-lg p-4 mb-6">
+                            <p className="text-[#1e40af] font-semibold">
                               🎯 {testimonial.metric}
                             </p>
                           </div>
@@ -133,7 +133,7 @@ const Testimonials = ({ testimonials = [] }) => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-[#168530]' : 'bg-gray-300'
+                index === currentIndex ? 'bg-[#82caff]' : 'bg-gray-300'
               }`}
             />
           ))}

@@ -81,8 +81,8 @@ const HowItWorks = () => {
                   </p>
 
                   {/* Benefit */}
-                  <div className="bg-green-50 rounded-lg p-4 mb-6">
-                    <p className="text-green-800 font-medium text-sm">
+                  <div className="bg-[#e0f2ff] rounded-lg p-4 mb-6">
+                    <p className="text-[#1e40af] font-medium text-sm">
                       ✓ {step.benefit}
                     </p>
                   </div>

@@ -91,8 +91,8 @@ const Contact = () => {
                 </h3>
 
                 {submitStatus === 'success' && (
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                    <p className="text-green-800">
+                  <div className="bg-[#e0f2ff] border border-[#b9e3ff] rounded-lg p-4 mb-6">
+                    <p className="text-[#1e40af]">
                       {t('successMessage')}
                     </p>
                   </div>
@@ -257,8 +257,8 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                      <EmailIcon className="w-5 h-5 text-green-600" />
+                    <div className="w-10 h-10 bg-[#cce7ff] rounded-full flex items-center justify-center">
+                      <EmailIcon className="w-5 h-5 text-[#60a5fa]" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">{t('email')}</p>

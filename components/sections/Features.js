@@ -73,7 +73,7 @@ const Features = () => {
                   <div className="space-y-3">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
                         <span className="text-gray-700 font-medium">{benefit}</span>
                       </div>
                     ))}

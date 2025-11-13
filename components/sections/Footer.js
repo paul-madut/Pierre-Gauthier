@@ -147,7 +147,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => scrollToSection('#contact')}
-                className="text-white px-8 py-3 rounded-lg font-semibold bg-[#168d30] hover:bg-[#158529] hover:shadow-lg hover:shadow-green-600/25 transition-all duration-300 transform hover:scale-105 glow-important"
+                className="text-white px-8 py-3 rounded-lg font-semibold bg-[#82caff] hover:bg-[#60a5fa] hover:shadow-lg hover:shadow-[#82caff]/25 transition-all duration-300 transform hover:scale-105 glow-important"
               >
                 {t('getFreeQuote')}
               </button>
@@ -179,7 +179,7 @@ const Footer = () => {
               </Link>
               <div className="flex items-center space-x-2">
                 <span className="text-gray-400">{t('licensedInsured')}</span>
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-[#82caff] rounded-full"></div>
               </div>
             </div>
           </div>

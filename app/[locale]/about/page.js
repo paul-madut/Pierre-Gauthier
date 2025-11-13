@@ -90,12 +90,12 @@ export default function About() {
                 </p>
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-500 mb-1">6</div>
-                    <div className="text-sm text-gray-600">Five Star Reviews</div>
+                    <div className="text-3xl font-bold text-primary-500 mb-1">R-60+</div>
+                    <div className="text-sm text-gray-600">Premium Materials</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-500 mb-1">2</div>
-                    <div className="text-sm text-gray-600">Homes Insulated</div>
+                    <div className="text-3xl font-bold text-primary-500 mb-1">100%</div>
+                    <div className="text-sm text-gray-600">Licensed & Insured</div>
                   </div>
                 </div>
                 <StyledButton
@@ -111,15 +111,15 @@ export default function About() {
               <div className="animate-fade-in-up animation-delay-400">
                 <div className="relative">
                   <Image
-                    src="/about/team-photo.jpg"
-                    alt="Veritas Insulation team"
+                    src="/images/about/image.png"
+                    alt="Pierre Gauthier - Founder of Veritas Insulation"
                     width={600}
                     height={500}
                     className="rounded-3xl shadow-2xl"
                   />
                   <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
-                    <div className="text-2xl font-bold text-green-600 mb-1">100%</div>
-                    <div className="text-sm text-gray-700">Satisfaction Rate</div>
+                    <div className="text-2xl font-bold text-[#60a5fa] mb-1">Ottawa</div>
+                    <div className="text-sm text-gray-700">Local & Trusted</div>
                   </div>
                 </div>
               </div>

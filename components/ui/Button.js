@@ -13,7 +13,7 @@ const Button = forwardRef(({
   const variants = {
     primary: 'bg-primary-500 text-white hover:bg-primary-600 hover:shadow-lg hover:shadow-primary-500/25 focus:ring-primary-500 glow-button transform hover:scale-105',
     secondary: 'bg-white text-gray-900 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 hover:shadow-md focus:ring-gray-500 transform hover:scale-105',
-    accent: 'bg-green-600 text-white hover:bg-green-700 hover:shadow-lg hover:shadow-green-600/25 focus:ring-green-500 glow-button transform hover:scale-105',
+    accent: 'bg-[#82caff] text-white hover:bg-[#60a5fa] hover:shadow-lg hover:shadow-[#82caff]/25 focus:ring-[#82caff] glow-button transform hover:scale-105',
     neumorphism: 'neumorphism-button text-gray-800 border-none focus:ring-primary-500'
   }
 

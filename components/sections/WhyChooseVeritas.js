@@ -9,7 +9,7 @@ const WhyChooseVeritas = () => {
     {
       title: 'Free, No-Obligation Assessment',
       description: 'Get a comprehensive evaluation of your insulation needs without any pressure or commitment.',
-      icon: <CheckIcon className="w-6 h-6 text-green-600" />,
+      icon: <CheckIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-1',
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white overflow-hidden relative">
@@ -19,14 +19,14 @@ const WhyChooseVeritas = () => {
             fill
             className="object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/5" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#82caff]/10 to-[#60a5fa]/5" />
         </div>
       ),
     },
     {
       title: 'Same-Day Quotes Available',
       description: 'Fast turnaround on estimates so you can make informed decisions quickly.',
-      icon: <ClockIcon className="w-6 h-6 text-green-600" />,
+      icon: <ClockIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-1',
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white overflow-hidden relative">
@@ -36,14 +36,14 @@ const WhyChooseVeritas = () => {
             fill
             className="object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/5" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#82caff]/10 to-[#60a5fa]/5" />
         </div>
       ),
     },
     {
       title: 'Licensed & Insured Technicians',
       description: 'Work with fully certified professionals who meet industry standards and safety requirements.',
-      icon: <ShieldIcon className="w-6 h-6 text-green-600" />,
+      icon: <ShieldIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-1',
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white overflow-hidden relative">
@@ -53,14 +53,14 @@ const WhyChooseVeritas = () => {
             fill
             className="object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/5" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#82caff]/10 to-[#60a5fa]/5" />
         </div>
       ),
     },
     {
       title: 'Transparent, Upfront Pricing',
       description: 'Clear, detailed quotes with no hidden fees or surprise charges. What we quote is what you pay.',
-      icon: <DollarSignIcon className="w-6 h-6 text-green-600" />,
+      icon: <DollarSignIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-2',
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white overflow-hidden relative">
@@ -70,43 +70,26 @@ const WhyChooseVeritas = () => {
             fill
             className="object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/5" />
-          <div className="absolute bottom-0 right-0 w-24 h-24 bg-green-500/5 rounded-tl-full" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#82caff]/10 to-[#60a5fa]/5" />
+          <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#82caff]/5 rounded-tl-full" />
         </div>
       ),
     },
     {
       title: 'Rebate Assistance Included',
       description: 'We help you navigate and claim all available government and utility rebates to maximize your savings.',
-      icon: <CalculatorIcon className="w-6 h-6 text-green-600" />,
-      className: 'md:col-span-1',
-      header: (
-        <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white overflow-hidden relative">
-          <Image
-            src="https://images.unsplash.com/photo-1554224311-beee460ae6fb?w=400&h=300&fit=crop"
-            alt="Rebate assistance"
-            fill
-            className="object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/5" />
-        </div>
-      ),
-    },
-    {
-      title: 'Lifetime Warranty Options',
-      description: 'Materials come with manufacturer lifetime warranty, plus quality guarantees on our installation work.',
-      icon: <AwardIcon className="w-6 h-6 text-green-600" />,
+      icon: <CalculatorIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-2',
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white overflow-hidden relative">
           <Image
             src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=300&fit=crop"
-            alt="Warranty protection"
+            alt="Rebate assistance and savings"
             fill
             className="object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-600/5" />
-          <div className="absolute top-0 left-0 w-32 h-32 bg-green-500/5 rounded-br-full" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#82caff]/10 to-[#60a5fa]/5" />
+          <div className="absolute top-0 left-0 w-32 h-32 bg-[#82caff]/5 rounded-br-full" />
         </div>
       ),
     },

@@ -63,12 +63,12 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16 gap-8">
             {/* Logo - Section 1 */}
             <Link href={`/${locale}`} className="flex items-center space-x-2 flex-shrink-0">
-              <div className="w-28 h-28">
+              <div className="w-40 h-12">
                 <Image
-                  src="/images/1.png"
+                  src="/logos/word_logo.png"
                   alt="Veritas Insulation Logo"
-                  width={480}
-                  height={480}
+                  width={160}
+                  height={48}
                   className="w-full h-full object-contain"
                 />
               </div>

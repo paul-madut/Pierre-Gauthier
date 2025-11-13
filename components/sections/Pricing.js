@@ -174,7 +174,7 @@ const Pricing = () => {
                   <div className="space-y-3">
                     {item.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
                         <span className="text-gray-700 font-medium">{benefit}</span>
                       </div>
                     ))}
@@ -295,7 +295,7 @@ const Pricing = () => {
             <StyledButton
               variant="secondary"
               size="xl"
-              className="glow-important  text-[#168530] border-white hover:bg-white hover:text-[#168530] hover:border-[#168530]"
+              className="glow-important  text-[#82caff] border-white hover:bg-white hover:text-[#82caff] hover:border-[#82caff]"
               onClick={scrollToContact}
             >
               {t('ctaButton')}

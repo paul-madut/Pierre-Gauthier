@@ -40,8 +40,8 @@ const Mission = () => {
               </div>
 
               <div className="text-center">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-green-600 font-bold text-lg">Q</span>
+                <div className="w-12 h-12 bg-[#cce7ff] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-[#60a5fa] font-bold text-lg">Q</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-1">{t('value2Title')}</h4>
                 <p className="text-sm text-gray-600">{t('value2Description')}</p>
@@ -81,7 +81,7 @@ const Mission = () => {
 
               {/* Decorative elements */}
               <div className="absolute top-1/4 -right-4 w-24 h-24 bg-primary-100 rounded-full opacity-50 animate-pulse"></div>
-              <div className="absolute bottom-1/4 -left-4 w-16 h-16 bg-green-100 rounded-full opacity-50 animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute bottom-1/4 -left-4 w-16 h-16 bg-[#cce7ff] rounded-full opacity-50 animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
           </div>
         </div>

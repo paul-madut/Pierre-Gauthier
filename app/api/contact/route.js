@@ -45,11 +45,11 @@ export async function POST(request) {
           <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
             .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #168530 0%, #0d5c20 100%); color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+            .header { background: linear-gradient(135deg, #82caff 0%, #60a5fa 100%); color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
             .content { background: #f9f9f9; padding: 30px; border: 1px solid #e0e0e0; border-top: none; border-radius: 0 0 8px 8px; }
             .field { margin-bottom: 20px; }
-            .field-label { font-weight: bold; color: #168530; margin-bottom: 5px; }
-            .field-value { background: white; padding: 10px; border-radius: 4px; border-left: 3px solid #168530; }
+            .field-label { font-weight: bold; color: #82caff; margin-bottom: 5px; }
+            .field-value { background: white; padding: 10px; border-radius: 4px; border-left: 3px solid #82caff; }
             .footer { text-align: center; margin-top: 20px; padding-top: 20px; border-top: 2px solid #e0e0e0; color: #666; font-size: 12px; }
             .priority { display: inline-block; background: #ff4444; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 15px; }
           </style>
@@ -69,12 +69,12 @@ export async function POST(request) {
 
               <div class="field">
                 <div class="field-label">📧 Email:</div>
-                <div class="field-value"><a href="mailto:${email}" style="color: #168530;">${email}</a></div>
+                <div class="field-value"><a href="mailto:${email}" style="color: #82caff;">${email}</a></div>
               </div>
 
               <div class="field">
                 <div class="field-label">📱 Phone:</div>
-                <div class="field-value"><a href="tel:${phone}" style="color: #168530;">${phone}</a></div>
+                <div class="field-value"><a href="tel:${phone}" style="color: #82caff;">${phone}</a></div>
               </div>
 
               ${data.address ? `

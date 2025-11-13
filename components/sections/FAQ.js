@@ -79,7 +79,7 @@ const FAQ = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-[#168d30] text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors glow-button"
+                className="bg-[#82caff] text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors glow-button"
               >
                 {t('getConsultation')}
               </button>

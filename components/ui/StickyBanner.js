@@ -11,7 +11,7 @@ export default function StickyBanner() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-30 animate-fade-in-up">
-      <div className="bg-gradient-to-r from-[#168D30] to-green-600 text-white">
+      <div className="bg-gradient-to-r from-[#60a5fa] to-[#82caff] text-white">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3 flex-1">

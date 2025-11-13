@@ -109,12 +109,10 @@ const FreeQuoteModal = () => {
       </button>
 
       {/* Header with gradient */}
-      <div className="bg-gradient-to-r from-primary-500 to-primary-600 px-4 py-3 sm:px-6 sm:py-4 text-[#168530] font-extrabold text-center">
+      <div className="bg-gradient-to-r from-primary-500 to-primary-600 px-4 py-3 sm:px-6 sm:py-4 text-[#82caff] font-extrabold text-center">
         <div>
-          <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-           <div className='w-full p-2'>
-          <Image src="/images/1.png" alt="Veritas Logo" width={600} height={600} className="w-full h-full object-contain" />
-           </div>
+          <div className="w-32 sm:w-40 h-auto mx-auto mb-2 sm:mb-3 px-2">
+          <Image src="/logos/word_logo.png" alt="Veritas Logo" width={160} height={50} className="w-full h-full object-contain" />
           </div>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1">
             Free Attic Inspection & Quote
@@ -138,26 +136,26 @@ const FreeQuoteModal = () => {
           {/* Benefits */}
           <div className="grid grid-cols-2 gap-1.5 sm:gap-2 mb-3 sm:mb-4 text-xs justify-center items-center">
             <div className="flex items-center space-x-1.5 sm:space-x-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
               <span className="text-gray-700">No obligation</span>
             </div>
             <div className="flex items-center space-x-1.5 sm:space-x-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
               <span className="text-gray-700">Licensed experts</span>
             </div>
             <div className="flex items-center space-x-1.5 sm:space-x-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
               <span className="text-gray-700">24hr response</span>
             </div>
             <div className="flex items-center space-x-1.5 sm:space-x-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
               <span className="text-gray-700">Rebate help</span>
             </div>
           </div>
 
           {submitStatus === 'success' && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 text-center">
-              <p className="text-green-800 font-medium">
+            <div className="bg-[#e0f2ff] border border-[#b9e3ff] rounded-lg p-4 mb-6 text-center">
+              <p className="text-[#1e40af] font-medium">
                 ✓ Success! We'll contact you within 24 hours on weekdays.
               </p>
             </div>
@@ -216,7 +214,7 @@ const FreeQuoteModal = () => {
 
             <button
               type="submit"
-              className="w-full bg-white text-[#168530] border-2 border-[#168530] hover:bg-[#168530] hover:text-white py-2.5 rounded-2xl font-semibold text-sm transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 animate-glow-button disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-white text-[#82caff] border-2 border-[#82caff] hover:bg-[#82caff] hover:text-white py-2.5 rounded-2xl font-semibold text-sm transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 animate-glow-button disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Claim Free Inspection'}

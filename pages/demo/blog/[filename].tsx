@@ -37,7 +37,7 @@ const BlogPage = (props) => {
           </h1>
           <ContentSection content={data.post.body}></ContentSection>
         </div>
-        <div className='bg-green-100 text-center'>
+        <div className='bg-[#cce7ff] text-center'>
           Lost and looking for a place to start?
           <a
             href='https://tina.io/docs/r/beginner-series'

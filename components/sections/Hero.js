@@ -73,7 +73,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#f0f9f4] pt-20 sm:pt-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#eef2f7] pt-20 sm:pt-24">
       {/* Background Image Div with content inside */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] h-[75%] z-0">
       </div>
@@ -97,12 +97,12 @@ const Hero = () => {
           <div className="relative animate-fade-in-up text-center lg:text-left">
             {/* Logo above heading */}
             <div className="mb-2 flex justify-center lg:justify-start">
-              <div className=" w-32 h-32 md:w-40 md:h-40 lg:w-84 lg:h-54">
+              <div className="w-48 md:w-56 lg:w-64 h-auto">
                 <Image
-                  src="/images/2.png"
+                  src="/logos/word_logo.png"
                   alt="Veritas Insulation"
-                  width={192}
-                  height={192}
+                  width={256}
+                  height={80}
                   className="w-full h-full object-contain hidden md:block"
                 />
               </div>
@@ -138,7 +138,7 @@ const Hero = () => {
             </div>
 
             {/* Trust indicators
-            <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0 text-green-400">
+            <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0 text-[#82caff]">
               <div className="text-center lg:text-left">
                 <div className="text-2xl font-bold text-primary-500 mb-1">2,500+</div>
                 <div className="text-sm text-gray-100">Homes Served</div>
@@ -170,8 +170,8 @@ const Hero = () => {
                 </div>
 
                 {submitStatus === 'success' && (
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                    <p className="text-green-800 text-sm">
+                  <div className="bg-[#e0f2ff] border border-[#b9e3ff] rounded-lg p-4 mb-6">
+                    <p className="text-[#1e40af] text-sm">
                       {t('successMessage')}
                     </p>
                   </div>
