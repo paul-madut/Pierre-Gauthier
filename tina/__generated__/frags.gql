@@ -18,3 +18,23 @@ fragment TestimonialParts on Testimonial {
   order
   featured
 }
+
+fragment ProjectParts on Project {
+  __typename
+  title
+  date
+  location
+  excerpt
+  featuredImage
+  beforeImages {
+    __typename
+    image
+    caption
+  }
+  afterImages {
+    __typename
+    image
+    caption
+  }
+  body
+}

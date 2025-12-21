@@ -28,6 +28,27 @@ export const TestimonialPartsFragmentDoc = gql`
   featured
 }
     `;
+export const ProjectPartsFragmentDoc = gql`
+    fragment ProjectParts on Project {
+  __typename
+  title
+  date
+  location
+  excerpt
+  featuredImage
+  beforeImages {
+    __typename
+    image
+    caption
+  }
+  afterImages {
+    __typename
+    image
+    caption
+  }
+  body
+}
+    `;
 export const PostDocument = gql`
     query post($relativePath: String!) {
   post(relativePath: $relativePath) {
@@ -142,6 +163,63 @@ export const TestimonialConnectionDocument = gql`
   }
 }
     ${TestimonialPartsFragmentDoc}`;
+export const ProjectDocument = gql`
+    query project($relativePath: String!) {
+  project(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...ProjectParts
+  }
+}
+    ${ProjectPartsFragmentDoc}`;
+export const ProjectConnectionDocument = gql`
+    query projectConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ProjectFilter) {
+  projectConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...ProjectParts
+      }
+    }
+  }
+}
+    ${ProjectPartsFragmentDoc}`;
 export function getSdk(requester) {
   return {
     post(variables, options) {
@@ -155,6 +233,12 @@ export function getSdk(requester) {
     },
     testimonialConnection(variables, options) {
       return requester(TestimonialConnectionDocument, variables, options);
+    },
+    project(variables, options) {
+      return requester(ProjectDocument, variables, options);
+    },
+    projectConnection(variables, options) {
+      return requester(ProjectConnectionDocument, variables, options);
     }
   };
 }

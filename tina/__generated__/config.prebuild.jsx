@@ -128,6 +128,92 @@ var config_default = defineConfig({
             description: "Show this testimonial prominently"
           }
         ]
+      },
+      {
+        name: "project",
+        label: "Projects",
+        path: "content/projects",
+        format: "mdx",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true
+          },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+            required: true
+          },
+          {
+            type: "string",
+            name: "location",
+            label: "Location",
+            required: true
+          },
+          {
+            type: "string",
+            name: "excerpt",
+            label: "Excerpt",
+            required: true,
+            ui: {
+              component: "textarea"
+            }
+          },
+          {
+            type: "image",
+            name: "featuredImage",
+            label: "Featured Image",
+            required: true
+          },
+          {
+            type: "object",
+            name: "beforeImages",
+            label: "Before Images",
+            list: true,
+            fields: [
+              {
+                type: "image",
+                name: "image",
+                label: "Image",
+                required: true
+              },
+              {
+                type: "string",
+                name: "caption",
+                label: "Caption"
+              }
+            ]
+          },
+          {
+            type: "object",
+            name: "afterImages",
+            label: "After Images",
+            list: true,
+            fields: [
+              {
+                type: "image",
+                name: "image",
+                label: "Image",
+                required: true
+              },
+              {
+                type: "string",
+                name: "caption",
+                label: "Caption"
+              }
+            ]
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Project Details",
+            isBody: true
+          }
+        ]
       }
     ]
   }

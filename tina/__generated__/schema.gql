@@ -58,11 +58,14 @@ type Query {
   postConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostFilter): PostConnection!
   testimonial(relativePath: String): Testimonial!
   testimonialConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: TestimonialFilter): TestimonialConnection!
+  project(relativePath: String): Project!
+  projectConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ProjectFilter): ProjectConnection!
 }
 
 input DocumentFilter {
   post: PostFilter
   testimonial: TestimonialFilter
+  project: ProjectFilter
 }
 
 type DocumentConnectionEdges {
@@ -88,7 +91,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Post | Testimonial | Folder
+union DocumentNode = Post | Testimonial | Project | Folder
 
 type Post implements Node & Document {
   title: String!
@@ -199,6 +202,62 @@ type TestimonialConnection implements Connection {
   edges: [TestimonialConnectionEdges]
 }
 
+type ProjectBeforeImages {
+  image: String!
+  caption: String
+}
+
+type ProjectAfterImages {
+  image: String!
+  caption: String
+}
+
+type Project implements Node & Document {
+  title: String!
+  date: String!
+  location: String!
+  excerpt: String!
+  featuredImage: String!
+  beforeImages: [ProjectBeforeImages]
+  afterImages: [ProjectAfterImages]
+  body: JSON
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input ProjectBeforeImagesFilter {
+  image: ImageFilter
+  caption: StringFilter
+}
+
+input ProjectAfterImagesFilter {
+  image: ImageFilter
+  caption: StringFilter
+}
+
+input ProjectFilter {
+  title: StringFilter
+  date: DatetimeFilter
+  location: StringFilter
+  excerpt: StringFilter
+  featuredImage: ImageFilter
+  beforeImages: ProjectBeforeImagesFilter
+  afterImages: ProjectAfterImagesFilter
+  body: RichTextFilter
+}
+
+type ProjectConnectionEdges {
+  cursor: String!
+  node: Project
+}
+
+type ProjectConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [ProjectConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -209,17 +268,21 @@ type Mutation {
   createPost(relativePath: String!, params: PostMutation!): Post!
   updateTestimonial(relativePath: String!, params: TestimonialMutation!): Testimonial!
   createTestimonial(relativePath: String!, params: TestimonialMutation!): Testimonial!
+  updateProject(relativePath: String!, params: ProjectMutation!): Project!
+  createProject(relativePath: String!, params: ProjectMutation!): Project!
 }
 
 input DocumentUpdateMutation {
   post: PostMutation
   testimonial: TestimonialMutation
+  project: ProjectMutation
   relativePath: String
 }
 
 input DocumentMutation {
   post: PostMutation
   testimonial: TestimonialMutation
+  project: ProjectMutation
 }
 
 input PostMutation {
@@ -239,6 +302,27 @@ input TestimonialMutation {
   rating: Float
   order: Float
   featured: Boolean
+}
+
+input ProjectBeforeImagesMutation {
+  image: String
+  caption: String
+}
+
+input ProjectAfterImagesMutation {
+  image: String
+  caption: String
+}
+
+input ProjectMutation {
+  title: String
+  date: String
+  location: String
+  excerpt: String
+  featuredImage: String
+  beforeImages: [ProjectBeforeImagesMutation]
+  afterImages: [ProjectAfterImagesMutation]
+  body: JSON
 }
 
 schema {

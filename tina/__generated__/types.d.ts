@@ -86,6 +86,8 @@ export type Query = {
   postConnection: PostConnection;
   testimonial: Testimonial;
   testimonialConnection: TestimonialConnection;
+  project: Project;
+  projectConnection: ProjectConnection;
 };
 
 
@@ -139,9 +141,25 @@ export type QueryTestimonialConnectionArgs = {
   filter?: InputMaybe<TestimonialFilter>;
 };
 
+
+export type QueryProjectArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryProjectConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<ProjectFilter>;
+};
+
 export type DocumentFilter = {
   post?: InputMaybe<PostFilter>;
   testimonial?: InputMaybe<TestimonialFilter>;
+  project?: InputMaybe<ProjectFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -181,7 +199,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Post | Testimonial | Folder;
+export type DocumentNode = Post | Testimonial | Project | Folder;
 
 export type Post = Node & Document & {
   __typename?: 'Post';
@@ -298,6 +316,67 @@ export type TestimonialConnection = Connection & {
   edges?: Maybe<Array<Maybe<TestimonialConnectionEdges>>>;
 };
 
+export type ProjectBeforeImages = {
+  __typename?: 'ProjectBeforeImages';
+  image: Scalars['String']['output'];
+  caption?: Maybe<Scalars['String']['output']>;
+};
+
+export type ProjectAfterImages = {
+  __typename?: 'ProjectAfterImages';
+  image: Scalars['String']['output'];
+  caption?: Maybe<Scalars['String']['output']>;
+};
+
+export type Project = Node & Document & {
+  __typename?: 'Project';
+  title: Scalars['String']['output'];
+  date: Scalars['String']['output'];
+  location: Scalars['String']['output'];
+  excerpt: Scalars['String']['output'];
+  featuredImage: Scalars['String']['output'];
+  beforeImages?: Maybe<Array<Maybe<ProjectBeforeImages>>>;
+  afterImages?: Maybe<Array<Maybe<ProjectAfterImages>>>;
+  body?: Maybe<Scalars['JSON']['output']>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type ProjectBeforeImagesFilter = {
+  image?: InputMaybe<ImageFilter>;
+  caption?: InputMaybe<StringFilter>;
+};
+
+export type ProjectAfterImagesFilter = {
+  image?: InputMaybe<ImageFilter>;
+  caption?: InputMaybe<StringFilter>;
+};
+
+export type ProjectFilter = {
+  title?: InputMaybe<StringFilter>;
+  date?: InputMaybe<DatetimeFilter>;
+  location?: InputMaybe<StringFilter>;
+  excerpt?: InputMaybe<StringFilter>;
+  featuredImage?: InputMaybe<ImageFilter>;
+  beforeImages?: InputMaybe<ProjectBeforeImagesFilter>;
+  afterImages?: InputMaybe<ProjectAfterImagesFilter>;
+  body?: InputMaybe<RichTextFilter>;
+};
+
+export type ProjectConnectionEdges = {
+  __typename?: 'ProjectConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Project>;
+};
+
+export type ProjectConnection = Connection & {
+  __typename?: 'ProjectConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<ProjectConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -309,6 +388,8 @@ export type Mutation = {
   createPost: Post;
   updateTestimonial: Testimonial;
   createTestimonial: Testimonial;
+  updateProject: Project;
+  createProject: Project;
 };
 
 
@@ -368,15 +449,29 @@ export type MutationCreateTestimonialArgs = {
   params: TestimonialMutation;
 };
 
+
+export type MutationUpdateProjectArgs = {
+  relativePath: Scalars['String']['input'];
+  params: ProjectMutation;
+};
+
+
+export type MutationCreateProjectArgs = {
+  relativePath: Scalars['String']['input'];
+  params: ProjectMutation;
+};
+
 export type DocumentUpdateMutation = {
   post?: InputMaybe<PostMutation>;
   testimonial?: InputMaybe<TestimonialMutation>;
+  project?: InputMaybe<ProjectMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
   post?: InputMaybe<PostMutation>;
   testimonial?: InputMaybe<TestimonialMutation>;
+  project?: InputMaybe<ProjectMutation>;
 };
 
 export type PostMutation = {
@@ -398,9 +493,32 @@ export type TestimonialMutation = {
   featured?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
+export type ProjectBeforeImagesMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  caption?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ProjectAfterImagesMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  caption?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ProjectMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  date?: InputMaybe<Scalars['String']['input']>;
+  location?: InputMaybe<Scalars['String']['input']>;
+  excerpt?: InputMaybe<Scalars['String']['input']>;
+  featuredImage?: InputMaybe<Scalars['String']['input']>;
+  beforeImages?: InputMaybe<Array<InputMaybe<ProjectBeforeImagesMutation>>>;
+  afterImages?: InputMaybe<Array<InputMaybe<ProjectAfterImagesMutation>>>;
+  body?: InputMaybe<Scalars['JSON']['input']>;
+};
+
 export type PostPartsFragment = { __typename: 'Post', title: string, date: string, author: string, excerpt: string, featuredImage: string, body?: any | null };
 
 export type TestimonialPartsFragment = { __typename: 'Testimonial', name: string, location: string, quote: string, metric: string, rating: number, order: number, featured?: boolean | null };
+
+export type ProjectPartsFragment = { __typename: 'Project', title: string, date: string, location: string, excerpt: string, featuredImage: string, body?: any | null, beforeImages?: Array<{ __typename: 'ProjectBeforeImages', image: string, caption?: string | null } | null> | null, afterImages?: Array<{ __typename: 'ProjectAfterImages', image: string, caption?: string | null } | null> | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -440,6 +558,25 @@ export type TestimonialConnectionQueryVariables = Exact<{
 
 export type TestimonialConnectionQuery = { __typename?: 'Query', testimonialConnection: { __typename?: 'TestimonialConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'TestimonialConnectionEdges', cursor: string, node?: { __typename: 'Testimonial', id: string, name: string, location: string, quote: string, metric: string, rating: number, order: number, featured?: boolean | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
+export type ProjectQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type ProjectQuery = { __typename?: 'Query', project: { __typename: 'Project', id: string, title: string, date: string, location: string, excerpt: string, featuredImage: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, beforeImages?: Array<{ __typename: 'ProjectBeforeImages', image: string, caption?: string | null } | null> | null, afterImages?: Array<{ __typename: 'ProjectAfterImages', image: string, caption?: string | null } | null> | null } };
+
+export type ProjectConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<ProjectFilter>;
+}>;
+
+
+export type ProjectConnectionQuery = { __typename?: 'Query', projectConnection: { __typename?: 'ProjectConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjectConnectionEdges', cursor: string, node?: { __typename: 'Project', id: string, title: string, date: string, location: string, excerpt: string, featuredImage: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, beforeImages?: Array<{ __typename: 'ProjectBeforeImages', image: string, caption?: string | null } | null> | null, afterImages?: Array<{ __typename: 'ProjectAfterImages', image: string, caption?: string | null } | null> | null } | null } | null> | null } };
+
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
   __typename
@@ -461,6 +598,27 @@ export const TestimonialPartsFragmentDoc = gql`
   rating
   order
   featured
+}
+    `;
+export const ProjectPartsFragmentDoc = gql`
+    fragment ProjectParts on Project {
+  __typename
+  title
+  date
+  location
+  excerpt
+  featuredImage
+  beforeImages {
+    __typename
+    image
+    caption
+  }
+  afterImages {
+    __typename
+    image
+    caption
+  }
+  body
 }
     `;
 export const PostDocument = gql`
@@ -577,6 +735,63 @@ export const TestimonialConnectionDocument = gql`
   }
 }
     ${TestimonialPartsFragmentDoc}`;
+export const ProjectDocument = gql`
+    query project($relativePath: String!) {
+  project(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...ProjectParts
+  }
+}
+    ${ProjectPartsFragmentDoc}`;
+export const ProjectConnectionDocument = gql`
+    query projectConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ProjectFilter) {
+  projectConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...ProjectParts
+      }
+    }
+  }
+}
+    ${ProjectPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -591,6 +806,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     testimonialConnection(variables?: TestimonialConnectionQueryVariables, options?: C): Promise<{data: TestimonialConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TestimonialConnectionQueryVariables, query: string}> {
         return requester<{data: TestimonialConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TestimonialConnectionQueryVariables, query: string}, TestimonialConnectionQueryVariables>(TestimonialConnectionDocument, variables, options);
+      },
+    project(variables: ProjectQueryVariables, options?: C): Promise<{data: ProjectQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ProjectQueryVariables, query: string}> {
+        return requester<{data: ProjectQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ProjectQueryVariables, query: string}, ProjectQueryVariables>(ProjectDocument, variables, options);
+      },
+    projectConnection(variables?: ProjectConnectionQueryVariables, options?: C): Promise<{data: ProjectConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ProjectConnectionQueryVariables, query: string}> {
+        return requester<{data: ProjectConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ProjectConnectionQueryVariables, query: string}, ProjectConnectionQueryVariables>(ProjectConnectionDocument, variables, options);
       }
     };
   }

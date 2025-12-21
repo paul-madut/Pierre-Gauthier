@@ -7,15 +7,15 @@ import Link from 'next/link';
 import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/sections/Footer';
 
-// Get all post slugs for static generation
+// Get all project slugs for static generation
 export async function generateStaticParams() {
-  const postsDirectory = path.join(process.cwd(), 'content/posts');
+  const projectsDirectory = path.join(process.cwd(), 'content/projects');
 
-  if (!fs.existsSync(postsDirectory)) {
+  if (!fs.existsSync(projectsDirectory)) {
     return [];
   }
 
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(projectsDirectory);
 
   return fileNames
     .filter(fileName => fileName.endsWith('.mdx') || fileName.endsWith('.md'))
@@ -24,17 +24,17 @@ export async function generateStaticParams() {
     }));
 }
 
-// Get post data
-function getPostBySlug(slug) {
-  const postsDirectory = path.join(process.cwd(), 'content/posts');
-  const fullPath = path.join(postsDirectory, `${slug}.mdx`);
+// Get project data
+function getProjectBySlug(slug) {
+  const projectsDirectory = path.join(process.cwd(), 'content/projects');
+  const fullPath = path.join(projectsDirectory, `${slug}.mdx`);
 
   // Try .mdx first, then .md
   let fileContents;
   try {
     fileContents = fs.readFileSync(fullPath, 'utf8');
   } catch {
-    const mdPath = path.join(postsDirectory, `${slug}.md`);
+    const mdPath = path.join(projectsDirectory, `${slug}.md`);
     fileContents = fs.readFileSync(mdPath, 'utf8');
   }
 
@@ -49,11 +49,11 @@ function getPostBySlug(slug) {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
-  const post = getPostBySlug(params.slug);
+  const project = getProjectBySlug(params.slug);
 
   return {
-    title: `${post.frontmatter.title} - Veritas Blog`,
-    description: post.frontmatter.excerpt,
+    title: `${project.frontmatter.title} - Veritas Projects`,
+    description: project.frontmatter.excerpt,
   };
 }
 
@@ -119,8 +119,8 @@ const components = {
   ),
 };
 
-export default function BlogPost({ params }) {
-  const post = getPostBySlug(params.slug);
+export default function ProjectPage({ params }) {
+  const project = getProjectBySlug(params.slug);
   const locale = params.locale || 'en';
 
   return (
@@ -153,7 +153,7 @@ export default function BlogPost({ params }) {
           {/* Header */}
           <header className="mb-12 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              {post.frontmatter.title}
+              {project.frontmatter.title}
             </h1>
 
             {/* Meta Information */}
@@ -169,10 +169,16 @@ export default function BlogPost({ params }) {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>{post.frontmatter.author}</span>
+                <span>{project.frontmatter.location}</span>
               </div>
 
               <div className="flex items-center">
@@ -190,7 +196,7 @@ export default function BlogPost({ params }) {
                   />
                 </svg>
                 <time>
-                  {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                  {new Date(project.frontmatter.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
@@ -201,16 +207,16 @@ export default function BlogPost({ params }) {
 
             {/* Excerpt */}
             <p className="text-xl text-gray-600 leading-relaxed">
-              {post.frontmatter.excerpt}
+              {project.frontmatter.excerpt}
             </p>
           </header>
 
           {/* Featured Image */}
-          {post.frontmatter.featuredImage && (
+          {project.frontmatter.featuredImage && (
             <div className="relative h-96 mb-12 rounded-2xl overflow-hidden animate-fade-in">
               <Image
-                src={post.frontmatter.featuredImage}
-                alt={post.frontmatter.title}
+                src={project.frontmatter.featuredImage}
+                alt={project.frontmatter.title}
                 fill
                 className="object-cover"
                 priority
@@ -219,9 +225,64 @@ export default function BlogPost({ params }) {
             </div>
           )}
 
-          {/* Content */}
+          {/* Before & After Images */}
+          {(project.frontmatter.beforeImages || project.frontmatter.afterImages) && (
+            <div className="mb-12">
+              {/* Before Images */}
+              {project.frontmatter.beforeImages && project.frontmatter.beforeImages.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Before</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {project.frontmatter.beforeImages.map((img, index) => (
+                      <div key={index} className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                          src={img.image}
+                          alt={img.caption || `Before image ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                        {img.caption && (
+                          <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-3 text-sm">
+                            {img.caption}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* After Images */}
+              {project.frontmatter.afterImages && project.frontmatter.afterImages.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">After</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {project.frontmatter.afterImages.map((img, index) => (
+                      <div key={index} className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                          src={img.image}
+                          alt={img.caption || `After image ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                        {img.caption && (
+                          <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-3 text-sm">
+                            {img.caption}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Project Details Content */}
           <div className="prose prose-lg max-w-none animate-fade-in-up animation-delay-200">
-            <MDXRemote source={post.content} components={components} />
+            <MDXRemote source={project.content} components={components} />
           </div>
 
           {/* Divider */}
@@ -243,7 +304,7 @@ export default function BlogPost({ params }) {
                   d="M15 19l-7-7 7-7"
                 />
               </svg>
-              View All Posts
+              View All Projects
             </Link>
           </div>
         </div>
