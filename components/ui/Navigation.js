@@ -62,10 +62,10 @@ const Navigation = () => {
         <div className="max-w-[1400px] mx-auto container-padding">
           <div className="flex items-center justify-between h-16 gap-8">
             {/* Logo - Section 1 */}
-            <Link href={`/${locale}`} className="flex items-center space-x-2 flex-shrink-0">
+            <Link href={`/${locale}`} className="flex items-center space-x-2 flex-shrink-0 -ml-6">
               <div className="w-40 h-12">
                 <Image
-                  src="/logos/logo.png"
+                  src="/logos/word_logo.png"
                   alt="Veritas Insulation Logo"
                   width={160}
                   height={48}

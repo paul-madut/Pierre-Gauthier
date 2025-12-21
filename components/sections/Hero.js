@@ -98,13 +98,7 @@ const Hero = () => {
             {/* Logo above heading */}
             <div className="mb-2 flex justify-center lg:justify-start">
               <div className="w-48 md:w-56 lg:w-64 h-auto">
-                <Image
-                  src="/logos/word_logo.png"
-                  alt="Veritas Insulation"
-                  width={256}
-                  height={80}
-                  className="w-full h-full object-contain hidden md:block"
-                />
+
               </div>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tighter tracking-tighter">

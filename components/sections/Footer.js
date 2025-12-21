@@ -179,7 +179,6 @@ const Footer = () => {
               </Link>
               <div className="flex items-center space-x-2">
                 <span className="text-gray-400">{t('licensedInsured')}</span>
-                <div className="w-2 h-2 bg-[#82caff] rounded-full"></div>
               </div>
             </div>
           </div>
