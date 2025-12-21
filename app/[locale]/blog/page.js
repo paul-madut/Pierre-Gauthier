@@ -37,7 +37,7 @@ function getAllPosts() {
 
 export const metadata = {
   title: 'Blog - Veritas Insulation',
-  description: 'Insights, tips, and updates about web development, insulation, and energy efficiency from the Veritas team.',
+  description: 'Expert insights on attic insulation, energy efficiency tips, home comfort solutions, and the latest in sustainable home improvements from the Veritas team.',
 };
 
 export default function BlogPage() {
@@ -55,7 +55,7 @@ export default function BlogPage() {
               Our <span className="text-primary-500">Blog</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Insights, tips, and updates about web development, technology, and best practices.
+              Expert insights on attic insulation, energy efficiency tips, and home comfort solutions to help you save money and live better.
             </p>
           </div>
 

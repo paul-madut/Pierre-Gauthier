@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter, usePathname, useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
-import { MenuIcon, CloseIcon } from './Icons'
+import { MenuIcon, CloseIcon, PhoneIcon } from './Icons'
 import StyledButton from './StyledButton'
 import LanguageToggle from './LanguageToggle'
 
@@ -28,10 +28,10 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
+    { name: t('testimonials'), href: '#testimonials' },
     { name: t('howItWorks'), href: '#how-it-works' },
     { name: t('features'), href: '#features' },
     { name: t('pricing'), href: '#pricing' },
-    { name: t('testimonials'), href: '#testimonials' },
     { name: t('faq'), href: '#faq' },
   ]
 
@@ -121,6 +121,13 @@ const Navigation = () => {
               >
                 {t('getFreeQuote')}
               </StyledButton>
+              <a
+                href="tel:6138079255"
+                className="p-2.5 bg-white border-2 border-[#82caff] text-[#82caff] hover:bg-[#82caff] hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-md hover:shadow-lg"
+                aria-label="Call Veritas Insulation"
+              >
+                <PhoneIcon className="w-5 h-5" />
+              </a>
             </div>
 
             {/* Mobile menu button */}

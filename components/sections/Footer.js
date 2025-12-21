@@ -96,7 +96,7 @@ const Footer = () => {
               ))}
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  {tNav('aboutUs')}
+                  {tNav('about')}
                 </Link>
               </li>
               <li>
