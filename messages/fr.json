@@ -158,36 +158,36 @@
     "subtitle": "Obtenez des réponses aux questions courantes sur l'isolation de grenier",
     "questions": [
       {
-        "q": "Combien de temps prend l'installation de l'isolation de grenier?",
-        "a": "La plupart des installations résidentielles sont complétées en 4 à 8 heures, selon la taille de votre maison. Nous travaillons efficacement pour minimiser les perturbations de votre routine quotidienne."
+        "q": "Quel type d'isolation offrez-vous?",
+        "a": "Nous utilisons principalement de l'isolation soufflée en cellulose et en fibre de verre pour les greniers, qui offre une couverture et une performance thermique supérieures. Nous offrons également de la mousse pulvérisée et de l'isolation en nattes pour des applications spécifiques comme les murs et les sous-sols. Lors de votre évaluation gratuite, nous recommanderons le meilleur type d'isolation pour vos besoins et votre budget spécifiques."
       },
       {
-        "q": "Quelle valeur R d'isolation ai-je besoin à Ottawa?",
-        "a": "Pour le climat d'Ottawa, nous recommandons R-60 à R-70 pour une efficacité énergétique optimale. Notre évaluation déterminera la valeur R exacte nécessaire pour votre maison spécifique et vos niveaux d'isolation actuels."
+        "q": "Que signifie la valeur R?",
+        "a": "La valeur R mesure la résistance de l'isolation au flux de chaleur - plus la valeur R est élevée, mieux l'isolation fonctionne. Pour le climat d'Ottawa, nous recommandons R-60 à R-70 pour les greniers. Pensez-y comme un manteau d'hiver : une valeur R plus élevée est comme un manteau plus épais et plus chaud qui garde plus de chaleur à l'intérieur de votre maison en hiver et à l'extérieur en été."
+      },
+      {
+        "q": "Combien de temps dure l'installation et dois-je quitter ma maison?",
+        "a": "La plupart des installations d'isolation de grenier résidentiel sont complétées en 4 à 8 heures, selon la taille de votre maison. Vous n'avez pas besoin de quitter votre maison pendant l'installation - vous pouvez vaquer à vos occupations normales. Nous travaillons exclusivement dans le grenier et utilisons des méthodes contrôlées contre la poussière pour minimiser tout impact sur votre espace de vie."
       },
       {
         "q": "L'installation de l'isolation créera-t-elle du désordre dans ma maison?",
-        "a": "Non. Nous utilisons des revêtements de protection dans toute votre maison et employons des méthodes d'installation contrôlées contre la poussière. Notre équipe effectue un nettoyage complet, laissant votre maison plus propre que nous ne l'avons trouvée."
+        "a": "Non. Nous utilisons des revêtements de protection dans toute votre maison et employons des méthodes d'installation contrôlées contre la poussière. Notre équipe effectue un nettoyage complet après chaque travail, laissant votre maison plus propre que nous ne l'avons trouvée. Nous sommes fiers de maintenir un environnement de travail propre et professionnel."
       },
       {
-        "q": "Quels rabais sont disponibles pour les améliorations d'isolation?",
-        "a": "Les résidents de l'Ontario peuvent recevoir jusqu'à 5 000 $ en rabais combinés des programmes fédéraux, provinciaux et des services publics. Nous gérons toute la paperasse et nous assurons que vous recevez les rabais maximaux disponibles."
+        "q": "Comment l'isolation me fait-elle économiser de l'argent?",
+        "a": "Une isolation adéquate agit comme une barrière, empêchant la chaleur de s'échapper en hiver et d'entrer en été. Cela signifie que votre fournaise et votre climatiseur n'ont pas à travailler aussi fort, consommant moins d'énergie. La plupart des clients constatent jusqu'à 40% de réduction des coûts de chauffage et de climatisation - soit des centaines de dollars économisés annuellement, et l'investissement se rembourse généralement en 2-3 ans."
       },
       {
-        "q": "Combien vais-je économiser sur mes factures d'énergie?",
-        "a": "La plupart des clients constatent une réduction de 25 à 40% des coûts de chauffage et de climatisation. Les économies exactes dépendent de l'isolation actuelle de votre maison, de sa taille et de vos habitudes de consommation d'énergie."
+        "q": "Quels rabais et crédits d'impôt sont disponibles?",
+        "a": "Les résidents de l'Ontario peuvent recevoir jusqu'à 5 000 $ en rabais combinés de la Subvention canadienne pour des maisons plus vertes, des programmes provinciaux et des incitatifs des services publics locaux. Nous gérons toute la paperasse et vous guidons tout au long du processus de rabais pour vous assurer de recevoir les économies maximales disponibles. Ces rabais peuvent couvrir une partie importante de votre coût d'installation."
       },
       {
-        "q": "Offrez-vous des garanties sur votre travail?",
-        "a": "Oui. Nous offrons des garanties complètes: 10 ans sur les installations Standard et une garantie à vie sur les forfaits Premium. Les matériaux sont également accompagnés de garanties du fabricant."
+        "q": "Quand dois-je payer?",
+        "a": "Le paiement est dû à la fin des travaux. Nous acceptons plusieurs méthodes de paiement, notamment l'argent comptant, les chèques, les virements électroniques, les cartes de crédit/débit et les paiements en ligne via Stripe ou PayPal. Nous pouvons également aider à organiser des options de financement si nécessaire. Vous ne payez jamais rien d'avance - vous ne payez qu'une fois que vous êtes complètement satisfait de l'installation terminée."
       },
       {
-        "q": "Pouvez-vous isoler d'autres zones que le grenier?",
-        "a": "Absolument. Nous isolons également les sous-sols, les vides sanitaires, les murs et les solives de rive. Notre évaluation identifiera toutes les zones où une meilleure isolation peut profiter à votre maison."
-      },
-      {
-        "q": "L'isolation soufflée est-elle meilleure que l'isolation en nattes?",
-        "a": "Pour les greniers, l'isolation soufflée est supérieure car elle remplit complètement les espaces et les zones irrégulières, offrant de meilleures performances thermiques et un meilleur scellage d'air par rapport aux nattes traditionnelles."
+        "q": "Y a-t-il une garantie sur le travail?",
+        "a": "Oui. Nous offrons une garantie sur la qualité de notre travail d'installation, et les matériaux d'isolation sont accompagnés d'une garantie à vie limitée du fabricant. Nous soutenons notre travail et nous nous engageons à votre satisfaction complète. Si des problèmes surviennent, nous les réglerons."
       }
     ],
     "stillHaveQuestionsTitle": "Vous avez encore des questions?",

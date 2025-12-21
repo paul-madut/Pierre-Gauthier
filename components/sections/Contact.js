@@ -8,7 +8,6 @@ import { PhoneIcon, EmailIcon, LocationIcon } from '../ui/Icons'
 
 const Contact = () => {
   const t = useTranslations('contact')
-  const tCommon = useTranslations('common')
 
   const [formData, setFormData] = useState({
     name: '',
@@ -283,45 +282,29 @@ const Contact = () => {
 
             {/* Service Areas */}
             <Card variant="default">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-gray-900 mb-6">
                   {t('serviceAreasTitle')}
                 </h3>
-                <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
-                  <div>Ottawa</div>
-                  <div>Kanata</div>
-                  <div>Nepean</div>
-                  <div>Orleans</div>
-                  <div>Barrhaven</div>
-                  <div>Stittsville</div>
-                  <div>Manotick</div>
-                  <div>Gloucester</div>
-                  <div>Cumberland</div>
-                  <div>Rockland</div>
+                <div className="grid grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+                  <div className="py-2">Ottawa</div>
+                  <div className="py-2">Kanata</div>
+                  <div className="py-2">Nepean</div>
+                  <div className="py-2">Orleans</div>
+                  <div className="py-2">Barrhaven</div>
+                  <div className="py-2">Stittsville</div>
+                  <div className="py-2">Manotick</div>
+                  <div className="py-2">Gloucester</div>
+                  <div className="py-2">Cumberland</div>
+                  <div className="py-2">Rockland</div>
+                  <div className="py-2">Gatineau</div>
+                  <div className="py-2">Aylmer</div>
+                  <div className="py-2">Chelsea</div>
+                  <div className="py-2">Wakefield</div>
                 </div>
-                <p className="text-sm text-gray-600 mt-4">
+                <p className="text-sm text-gray-600 mt-6 pt-6 border-t border-gray-200">
                   Don't see your area? <a href="tel:6138079255" className="text-primary-500 hover:underline">Call us</a> - we may still be able to help!
                 </p>
-              </CardContent>
-            </Card>
-
-            {/* Emergency Contact */}
-            <Card variant="elevated" className="bg-primary-50 border-primary-200">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-lg font-semibold text-primary-900 mb-2">
-                  {t('needHelpTitle')}
-                </h3>
-                <p className="text-primary-700 mb-4 text-sm">
-                  {t('needHelpSubtitle')}
-                </p>
-                <StyledButton
-                  variant="secondary"
-                  size="md"
-                  className="glow-important"
-                  onClick={() => window.location.href = 'tel:6138079255'}
-                >
-                  {t('callNowButton')}
-                </StyledButton>
               </CardContent>
             </Card>
           </div>

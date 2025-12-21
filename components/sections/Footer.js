@@ -171,12 +171,6 @@ const Footer = () => {
             </div>
 
             <div className="flex items-center space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                {t('privacyPolicy')}
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                {t('termsOfService')}
-              </Link>
               <div className="flex items-center space-x-2">
                 <span className="text-gray-400">{t('licensedInsured')}</span>
               </div>

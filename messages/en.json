@@ -158,36 +158,36 @@
     "subtitle": "Get answers to common questions about attic insulation",
     "questions": [
       {
-        "q": "How long does attic insulation installation take?",
-        "a": "Most residential installations are completed in 4-8 hours, depending on the size of your home. We work efficiently to minimize disruption to your daily routine."
+        "q": "What type of insulation do you offer?",
+        "a": "We primarily use blown-in cellulose and fiberglass insulation for attics, which provides superior coverage and thermal performance. We also offer spray foam and batt insulation for specific applications like walls and basements. During your free assessment, we'll recommend the best insulation type for your specific needs and budget."
       },
       {
-        "q": "What R-value insulation do I need in Ottawa?",
-        "a": "For Ottawa's climate, we recommend R-60 to R-70 for optimal energy efficiency. Our assessment will determine the exact R-value needed for your specific home and current insulation levels."
+        "q": "What does R-value mean?",
+        "a": "R-value measures insulation's resistance to heat flow - the higher the R-value, the better the insulation performs. For Ottawa's climate, we recommend R-60 to R-70 for attics. Think of it like a winter coat: a higher R-value is like a thicker, warmer coat that keeps more heat inside your home during winter and outside during summer."
+      },
+      {
+        "q": "How long does installation take and do I need to leave my house?",
+        "a": "Most residential attic insulation installations are completed in 4-8 hours, depending on your home's size. You don't need to leave your home during installation - you can go about your normal routine. We work exclusively in the attic and use dust-controlled methods to minimize any impact on your living space."
       },
       {
         "q": "Will insulation installation create a mess in my home?",
-        "a": "No. We use protective coverings throughout your home and employ dust-controlled installation methods. Our team performs complete cleanup, leaving your home cleaner than we found it."
+        "a": "No. We use protective coverings throughout your home and employ dust-controlled installation methods. Our team performs complete cleanup after every job, leaving your home cleaner than we found it. We take pride in maintaining a clean, professional work environment."
       },
       {
-        "q": "What rebates are available for insulation upgrades?",
-        "a": "Ontario residents can receive up to $5,000 in combined rebates from federal, provincial, and utility programs. We handle all paperwork and ensure you receive maximum available rebates."
+        "q": "How does insulation save me money?",
+        "a": "Proper insulation acts as a barrier, preventing heat from escaping in winter and entering in summer. This means your furnace and air conditioner don't have to work as hard, using less energy. Most customers see up to 40% reduction in heating and cooling costs - that's hundreds of dollars saved annually, and the investment typically pays for itself within 2-3 years."
       },
       {
-        "q": "How much will I save on energy bills?",
-        "a": "Most customers see up to 40% reduction in heating and cooling costs. The exact savings depend on your home's current insulation, size, and energy usage patterns."
+        "q": "What rebates and tax credits are available?",
+        "a": "Ontario residents can receive up to $5,000 in combined rebates from federal Canada Greener Homes Grant, provincial programs, and local utility incentives. We handle all the paperwork and guide you through the entire rebate process to ensure you receive the maximum available savings. These rebates can cover a significant portion of your installation cost."
       },
       {
-        "q": "Do you offer warranties on your work?",
-        "a": "Yes. Materials come with a limited lifetime warranty from the manufacturer, and I personally provide a warranty on the quality of my installation work."
+        "q": "When do I pay?",
+        "a": "Payment is due upon completion of the work. We accept multiple payment methods including cash, check, e-transfer, credit/debit cards, and online payments through Stripe or PayPal. We can also help arrange financing options if needed. You'll never pay anything upfront - you only pay once you're completely satisfied with the completed installation."
       },
       {
-        "q": "Can you insulate other areas besides the attic?",
-        "a": "Absolutely. We also insulate basements, crawl spaces, walls, and rim joists. Our assessment will identify all areas where improved insulation can benefit your home."
-      },
-      {
-        "q": "Is blown-in insulation better than batt insulation?",
-        "a": "For attics, blown-in insulation is superior as it fills gaps and irregular spaces completely, providing better thermal performance and air sealing compared to traditional batts."
+        "q": "Is there a warranty on the work?",
+        "a": "Yes. We provide a warranty on the quality of our installation work, and the insulation materials come with a limited lifetime warranty from the manufacturer. We stand behind our work and are committed to your complete satisfaction. If any issues arise, we'll make it right."
       }
     ],
     "stillHaveQuestionsTitle": "Still Have Questions?",

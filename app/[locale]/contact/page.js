@@ -182,35 +182,6 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
-
-        {/* Emergency Contact */}
-        <section className="section-padding bg-red-50">
-          <div className="max-w-4xl mx-auto container-padding text-center">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-4">
-              Need Immediate Help?
-            </h2>
-            <p className="text-lg text-gray-700 mb-8">
-              For urgent insulation issues, ice dam problems, or emergency consultations
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:6138079255"
-                className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors inline-block"
-              >
-                Emergency Line: (613) 807-9255
-              </a>
-              <a
-                href="mailto:pierre@veritasinsulation.com?subject=Emergency%20Consultation"
-                className="bg-white text-red-600 border border-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-block"
-              >
-                Emergency Email
-              </a>
-            </div>
-            <p className="text-sm text-gray-600 mt-4">
-              Available 5 days a week - 24 hour response time on weekdays
-            </p>
-          </div>
-        </section>
       </main>
       <Footer />
     </>
