@@ -2,26 +2,26 @@
 
 import { useTranslations } from 'next-intl'
 import { Card, CardContent } from '../ui/Card'
-import { ShieldIcon, HomeIcon, LeafIcon, DollarIcon } from '../ui/Icons'
+import { DollarSignIcon, HeartIcon, CameraIcon, DollarIcon } from '../ui/Icons'
 import StyledButton from '../ui/StyledButton'
 
 const Features = () => {
   const t = useTranslations('features')
   const features = [
     {
-      icon: ShieldIcon,
+      icon: DollarSignIcon,
       title: t('feature1.title'),
       description: t('feature1.description'),
       benefits: [t('feature1.benefits.0'), t('feature1.benefits.1'), t('feature1.benefits.2')]
     },
     {
-      icon: HomeIcon,
+      icon: HeartIcon,
       title: t('feature2.title'),
       description: t('feature2.description'),
       benefits: [t('feature2.benefits.0'), t('feature2.benefits.1'), t('feature2.benefits.2')]
     },
     {
-      icon: LeafIcon,
+      icon: CameraIcon,
       title: t('feature3.title'),
       description: t('feature3.description'),
       benefits: [t('feature3.benefits.0'), t('feature3.benefits.1'), t('feature3.benefits.2')]

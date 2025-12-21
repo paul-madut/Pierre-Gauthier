@@ -81,19 +81,13 @@ const Testimonials = ({ testimonials = [] }) => {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <Card variant="glass" className="mx-4">
-                    <CardContent className="p-8 md:p-12">
+                <div key={index} className="w-full flex-shrink-0 flex justify-center">
+                  <div className="max-w-4xl w-full px-4">
+                    <Card variant="glass" className="border border-gray-200">
+                      <CardContent className="p-8 md:p-12">
                       <div className="grid grid-cols-1 gap-8 items-center">
                         {/* Content */}
                         <div className="text-center">
-                          {/* Stars */}
-                          <div className="flex justify-center mb-4">
-                            {[...Array(testimonial.rating)].map((_, i) => (
-                              <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-                            ))}
-                          </div>
-
                           {/* Quote */}
                           <blockquote className="text-xl md:text-2xl text-gray-900 mb-4 font-light leading-relaxed">
                             "{expandedIndexes.has(index) ? testimonial.quote : truncateText(testimonial.quote)}"
@@ -116,6 +110,13 @@ const Testimonials = ({ testimonials = [] }) => {
                             </p>
                           </div>
 
+                          {/* Stars */}
+                          <div className="flex justify-center mb-3">
+                            {[...Array(testimonial.rating)].map((_, i) => (
+                              <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+                            ))}
+                          </div>
+
                           {/* Attribution */}
                           <cite className="not-italic">
                             <div className="font-semibold text-gray-900 text-lg">
@@ -129,6 +130,7 @@ const Testimonials = ({ testimonials = [] }) => {
                       </div>
                     </CardContent>
                   </Card>
+                  </div>
                 </div>
               ))}
             </div>

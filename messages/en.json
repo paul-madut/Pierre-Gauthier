@@ -65,21 +65,21 @@
   },
   "features": {
     "title": "Why Choose Veritas",
-    "subtitle": "Premium materials, proven techniques, and unmatched service quality",
+    "subtitle": "Fair pricing, your best interests first, and complete transparency in every project",
     "feature1": {
-      "title": "High R-Value Materials",
-      "description": "Best-in-class thermal performance with premium insulation materials that exceed industry standards.",
-      "benefits": ["R-60+ thermal resistance", "Energy Star certified materials", "Fire-resistant options available"]
+      "title": "Fair Pricing",
+      "description": "Transparent, honest pricing with no hidden fees or surprise charges. You'll know exactly what you're paying for before we start.",
+      "benefits": ["Upfront pricing estimates", "No hidden fees", "Competitive rates"]
     },
     "feature2": {
-      "title": "Air-Sealing & Ventilation",
-      "description": "Complete air-sealing services that improve comfort, indoor air quality, and prevent energy loss.",
-      "benefits": ["Drafts elimination", "Moisture control", "Improved air quality"]
+      "title": "Best-Interest Solutions",
+      "description": "We recommend only what your home truly needs, not what makes us the most profit. Your comfort and savings come first.",
+      "benefits": ["Honest assessments", "No upselling tactics", "Solutions tailored to you"]
     },
     "feature3": {
-      "title": "Eco-Friendly Options",
-      "description": "Sustainable insulation solutions using recycled materials and low-VOC options for healthier homes.",
-      "benefits": ["80% recycled content", "Zero harmful chemicals", "Carbon footprint reduction"]
+      "title": "Picture-Proof Work Transparency",
+      "description": "Before and after photos of every project, so you can see exactly what work was done in your attic.",
+      "benefits": ["Photo documentation", "Complete transparency", "Quality assurance"]
     },
     "feature4": {
       "title": "Rebate Assistance",

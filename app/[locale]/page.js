@@ -58,10 +58,10 @@ export default function Home() {
         <Hero />
         {/* <Certifications /> */}
         <Testimonials testimonials={testimonials} />
-        <HowItWorks />
+        {/* <HowItWorks /> */}
         <Features />
         <Mission />
-        <Pricing />
+        {/* <Pricing /> */}
         <FAQ />
         <Contact />
       </main>

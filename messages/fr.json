@@ -65,21 +65,21 @@
   },
   "features": {
     "title": "Pourquoi choisir Veritas",
-    "subtitle": "Matériaux premium, techniques éprouvées et qualité de service inégalée",
+    "subtitle": "Tarification équitable, vos intérêts d'abord, et transparence totale dans chaque projet",
     "feature1": {
-      "title": "Matériaux à valeur R élevée",
-      "description": "Performance thermique de première classe avec des matériaux d'isolation premium qui dépassent les normes de l'industrie.",
-      "benefits": ["Résistance thermique R-60+", "Matériaux certifiés Energy Star", "Options résistantes au feu disponibles"]
+      "title": "Tarification Équitable",
+      "description": "Tarification transparente et honnête sans frais cachés ni frais surprises. Vous saurez exactement ce que vous payez avant de commencer.",
+      "benefits": ["Estimations de prix claires", "Aucun frais caché", "Tarifs compétitifs"]
     },
     "feature2": {
-      "title": "Scellage d'air et ventilation",
-      "description": "Services complets de scellage d'air qui améliorent le confort, la qualité de l'air intérieur et préviennent les pertes d'énergie.",
-      "benefits": ["Élimination des courants d'air", "Contrôle de l'humidité", "Qualité de l'air améliorée"]
+      "title": "Solutions dans Votre Intérêt",
+      "description": "Nous recommandons uniquement ce dont votre maison a vraiment besoin, pas ce qui nous rapporte le plus. Votre confort et vos économies passent en premier.",
+      "benefits": ["Évaluations honnêtes", "Pas de tactiques de vente", "Solutions adaptées à vous"]
     },
     "feature3": {
-      "title": "Options écologiques",
-      "description": "Solutions d'isolation durables utilisant des matériaux recyclés et des options à faible COV pour des maisons plus saines.",
-      "benefits": ["80% de contenu recyclé", "Zéro produit chimique nocif", "Réduction de l'empreinte carbone"]
+      "title": "Transparence Photo des Travaux",
+      "description": "Photos avant et après de chaque projet, afin que vous puissiez voir exactement quel travail a été effectué dans votre grenier.",
+      "benefits": ["Documentation photo", "Transparence totale", "Assurance qualité"]
     },
     "feature4": {
       "title": "Aide aux rabais",
