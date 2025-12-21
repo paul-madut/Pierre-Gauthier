@@ -40,7 +40,9 @@
       "satisfaction": "Customer Satisfaction",
       "rating": "Average Rating",
       "complaints": "Unresolved Complaints"
-    }
+    },
+    "readMore": "Read more",
+    "showLess": "Show less"
   },
   "howItWorks": {
     "title": "How It Works",

@@ -40,7 +40,9 @@
       "satisfaction": "Satisfaction client",
       "rating": "Note moyenne",
       "complaints": "Plaintes non résolues"
-    }
+    },
+    "readMore": "Lire plus",
+    "showLess": "Afficher moins"
   },
   "howItWorks": {
     "title": "Comment ça fonctionne",

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { CloseIcon, PhoneIcon } from './Icons'
+import { CloseIcon } from './Icons'
 
 const AnimatedModal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null

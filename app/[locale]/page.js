@@ -25,7 +25,7 @@ function getTestimonials() {
   const fileNames = fs.readdirSync(testimonialsDirectory)
 
   const testimonials = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
+    .filter(fileName => fileName.endsWith('.md') && fileName !== 'README.md')
     .map((fileName) => {
       const fullPath = path.join(testimonialsDirectory, fileName)
       const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -41,6 +41,7 @@ function getTestimonials() {
         featured: data.featured || false,
       }
     })
+    .filter(testimonial => testimonial.name && testimonial.quote) // Filter out incomplete testimonials
     .sort((a, b) => a.order - b.order) // Sort by order field
 
   return testimonials

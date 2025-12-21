@@ -9,6 +9,7 @@ const Testimonials = ({ testimonials = [] }) => {
   const t = useTranslations('testimonials')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
+  const [expandedIndexes, setExpandedIndexes] = useState(new Set())
 
   // If no testimonials, don't render the section
   if (!testimonials || testimonials.length === 0) {
@@ -37,6 +38,23 @@ const Testimonials = ({ testimonials = [] }) => {
 
   const prevSlide = () => {
     setCurrentIndex(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)
+  }
+
+  const toggleExpanded = (index) => {
+    setExpandedIndexes(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(index)) {
+        newSet.delete(index)
+      } else {
+        newSet.add(index)
+      }
+      return newSet
+    })
+  }
+
+  const truncateText = (text, maxLength = 200) => {
+    if (!text || text.length <= maxLength) return text
+    return text.substring(0, maxLength).trim() + '...'
   }
 
   return (
@@ -77,14 +95,24 @@ const Testimonials = ({ testimonials = [] }) => {
                           </div>
 
                           {/* Quote */}
-                          <blockquote className="text-xl md:text-2xl text-gray-900 mb-6 font-light leading-relaxed">
-                            "{testimonial.quote}"
+                          <blockquote className="text-xl md:text-2xl text-gray-900 mb-4 font-light leading-relaxed">
+                            "{expandedIndexes.has(index) ? testimonial.quote : truncateText(testimonial.quote)}"
                           </blockquote>
+
+                          {/* Read More Button */}
+                          {testimonial.quote && testimonial.quote.length > 200 && (
+                            <button
+                              onClick={() => toggleExpanded(index)}
+                              className="text-[#82caff] hover:text-primary-600 font-medium text-sm mb-4 transition-colors"
+                            >
+                              {expandedIndexes.has(index) ? t('showLess') : t('readMore')}
+                            </button>
+                          )}
 
                           {/* Metric */}
                           <div className="bg-[#e0f2ff] rounded-lg p-4 mb-6">
                             <p className="text-[#1e40af] font-semibold">
-                              🎯 {testimonial.metric}
+                              {testimonial.metric}
                             </p>
                           </div>
 
