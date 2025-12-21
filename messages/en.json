@@ -262,5 +262,23 @@
   "banner": {
     "message": "This website is still under construction. Some features may be unavailable and some information may be inaccurate.",
     "close": "Close banner"
+  },
+  "modal": {
+    "title": "Free Attic Inspection & Quote",
+    "subtitle": "Save 40% on Heating & Cooling Bills",
+    "description": "Get a professional assessment of your attic insulation and discover how much you could save with our premium R-60+ solutions.",
+    "benefit1": "No obligation",
+    "benefit2": "Licensed experts",
+    "benefit3": "24hr response",
+    "benefit4": "Rebate help",
+    "namePlaceholder": "Your Name",
+    "phonePlaceholder": "Phone Number",
+    "emailPlaceholder": "Email Address",
+    "submitButton": "Claim Free Inspection",
+    "submitting": "Sending...",
+    "successMessage": "✓ Success! We'll contact you within 24 hours on weekdays.",
+    "errorMessage": "✗ Something went wrong. Please try again or call us directly.",
+    "orCallText": "Or call us directly:",
+    "noSpam": "No spam, guaranteed."
   }
 }

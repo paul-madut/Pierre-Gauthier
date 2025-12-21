@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
 
   const titles = {
     en: 'Veritas Insulation - Premium Attic Insulation Services Ottawa',
-    fr: 'Veritas Isolation - Services d\'Isolation de Grenier Premium à Ottawa'
+    fr: 'Isolation Veritas - Services d\'Isolation de Grenier Premium à Ottawa'
   }
 
   const descriptions = {
@@ -51,7 +51,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <NextIntlClientProvider messages={messages}>
       {children}
-      <StickyBanner />
+      {/* <StickyBanner /> */}
     </NextIntlClientProvider>
   )
 }

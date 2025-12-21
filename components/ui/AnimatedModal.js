@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { CloseIcon, PhoneIcon } from './Icons'
 
 const AnimatedModal = ({ isOpen, onClose, children }) => {
@@ -24,6 +25,8 @@ const AnimatedModal = ({ isOpen, onClose, children }) => {
 }
 
 const FreeQuoteModal = () => {
+  const t = useTranslations('modal')
+  const tCommon = useTranslations('common')
   const [isOpen, setIsOpen] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
@@ -115,7 +118,7 @@ const FreeQuoteModal = () => {
           <Image src="/logos/word_logo.png" alt="Veritas Logo" width={160} height={50} className="w-full h-full object-contain" />
           </div>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1">
-            Free Attic Inspection & Quote
+            {t('title')}
           </h2>
         </div>
       </div>
@@ -125,11 +128,10 @@ const FreeQuoteModal = () => {
         <div>
           <div className="text-center mb-3 sm:mb-4">
             <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
-              Save 40% on Heating & Cooling Bills
+              {t('subtitle')}
             </h3>
             <p className="text-gray-600 text-xs leading-relaxed">
-              Get a professional assessment of your attic insulation and discover
-              how much you could save with our premium R-60+ solutions.
+              {t('description')}
             </p>
           </div>
 
@@ -137,26 +139,26 @@ const FreeQuoteModal = () => {
           <div className="grid grid-cols-2 gap-1.5 sm:gap-2 mb-3 sm:mb-4 text-xs justify-center items-center">
             <div className="flex items-center space-x-1.5 sm:space-x-2">
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
-              <span className="text-gray-700">No obligation</span>
+              <span className="text-gray-700">{t('benefit1')}</span>
             </div>
             <div className="flex items-center space-x-1.5 sm:space-x-2">
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
-              <span className="text-gray-700">Licensed experts</span>
+              <span className="text-gray-700">{t('benefit2')}</span>
             </div>
             <div className="flex items-center space-x-1.5 sm:space-x-2">
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
-              <span className="text-gray-700">24hr response</span>
+              <span className="text-gray-700">{t('benefit3')}</span>
             </div>
             <div className="flex items-center space-x-1.5 sm:space-x-2">
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#82caff] rounded-full flex-shrink-0"></div>
-              <span className="text-gray-700">Rebate help</span>
+              <span className="text-gray-700">{t('benefit4')}</span>
             </div>
           </div>
 
           {submitStatus === 'success' && (
             <div className="bg-[#e0f2ff] border border-[#b9e3ff] rounded-lg p-4 mb-6 text-center">
               <p className="text-[#1e40af] font-medium">
-                ✓ Success! We'll contact you within 24 hours on weekdays.
+                {t('successMessage')}
               </p>
             </div>
           )}
@@ -164,7 +166,7 @@ const FreeQuoteModal = () => {
           {submitStatus === 'error' && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
               <p className="text-red-800 text-sm">
-                ✗ Something went wrong. Please try again or call us directly.
+                {t('errorMessage')}
               </p>
             </div>
           )}
@@ -189,7 +191,7 @@ const FreeQuoteModal = () => {
               onChange={handleChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
-              placeholder="Your Name"
+              placeholder={t('namePlaceholder')}
             />
 
             <input
@@ -199,7 +201,7 @@ const FreeQuoteModal = () => {
               onChange={handleChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
-              placeholder="Phone Number"
+              placeholder={t('phonePlaceholder')}
             />
 
             <input
@@ -209,7 +211,7 @@ const FreeQuoteModal = () => {
               onChange={handleChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-sm"
-              placeholder="Email Address"
+              placeholder={t('emailPlaceholder')}
             />
 
             <button
@@ -217,23 +219,23 @@ const FreeQuoteModal = () => {
               className="w-full bg-white text-[#82caff] border-2 border-[#82caff] hover:bg-[#82caff] hover:text-white py-2.5 rounded-2xl font-semibold text-sm transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 animate-glow-button disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Sending...' : 'Claim Free Inspection'}
+              {isSubmitting ? t('submitting') : t('submitButton')}
             </button>
           </form>
 
           {/* Call option */}
           <div className="mt-2 sm:mt-3 text-center">
-            <p className="text-xs text-gray-500 mb-1">Or call us directly:</p>
+            <p className="text-xs text-gray-500 mb-1">{t('orCallText')}</p>
             <a
               href="tel:6138079255"
               className="text-primary-500 font-semibold hover:underline text-sm"
             >
-              (613) 807-9255
+              {tCommon('phone')}
             </a>
           </div>
 
           <p className="text-xs text-gray-400 text-center mt-2 sm:mt-3">
-            No spam, guaranteed.
+            {t('noSpam')}
           </p>
         </div>
       </div>

@@ -262,5 +262,23 @@
   "banner": {
     "message": "Ce site web est toujours en construction. Certaines fonctionnalités peuvent être indisponibles et certaines informations peuvent être inexactes.",
     "close": "Fermer la bannière"
+  },
+  "modal": {
+    "title": "Inspection et Devis Gratuits de Grenier",
+    "subtitle": "Économisez 40% sur les Factures de Chauffage et Climatisation",
+    "description": "Obtenez une évaluation professionnelle de l'isolation de votre grenier et découvrez combien vous pourriez économiser avec nos solutions premium R-60+.",
+    "benefit1": "Sans obligation",
+    "benefit2": "Experts agréés",
+    "benefit3": "Réponse 24h",
+    "benefit4": "Aide aux rabais",
+    "namePlaceholder": "Votre nom",
+    "phonePlaceholder": "Numéro de téléphone",
+    "emailPlaceholder": "Adresse courriel",
+    "submitButton": "Obtenir une Inspection Gratuite",
+    "submitting": "Envoi en cours...",
+    "successMessage": "✓ Succès! Nous vous contacterons dans les 24 heures en semaine.",
+    "errorMessage": "✗ Une erreur s'est produite. Veuillez réessayer ou nous appeler directement.",
+    "orCallText": "Ou appelez-nous directement:",
+    "noSpam": "Sans spam, garanti."
   }
 }
