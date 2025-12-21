@@ -65,7 +65,7 @@ const Navigation = () => {
             <Link href={`/${locale}`} className="flex items-center space-x-2 flex-shrink-0">
               <div className="w-40 h-12">
                 <Image
-                  src="/logos/word_logo.png"
+                  src="/logos/logo.png"
                   alt="Veritas Insulation Logo"
                   width={160}
                   height={48}
