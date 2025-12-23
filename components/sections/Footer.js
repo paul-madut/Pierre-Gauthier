@@ -1,10 +1,13 @@
 'use client'
 
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { PhoneIcon, EmailIcon, LocationIcon } from '../ui/Icons'
 
 const Footer = () => {
+  const params = useParams()
+  const locale = params.locale || 'en'
   const t = useTranslations('footer')
   const tNav = useTranslations('nav')
   const tCommon = useTranslations('common')
@@ -95,13 +98,23 @@ const Footer = () => {
                 </li>
               ))}
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link href={`/${locale}/about`} className="text-gray-300 hover:text-white transition-colors">
                   {tNav('about')}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link href={`/${locale}/blog`} className="text-gray-300 hover:text-white transition-colors">
+                  {tNav('blog')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/contact`} className="text-gray-300 hover:text-white transition-colors">
                   {tNav('contact')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/careers`} className="text-gray-300 hover:text-white transition-colors">
+                  {tNav('careers')}
                 </Link>
               </li>
             </ul>

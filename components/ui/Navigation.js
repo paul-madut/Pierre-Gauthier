@@ -9,6 +9,17 @@ import { MenuIcon, CloseIcon, PhoneIcon } from './Icons'
 import StyledButton from './StyledButton'
 import LanguageToggle from './LanguageToggle'
 
+/*************  ✨ Windsurf Command ⭐  *************/
+/**
+ * Navigation component.
+ *
+ * Handles the navigation links and language toggle.
+ *
+ * Shows a sticky banner at the bottom of the page.
+ *
+ * @returns {JSX.Element} The JSX element representing the Navigation component.
+ */
+/*******  d1b97755-5ad2-4915-872e-add4dcec046c  *******/
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -62,7 +73,7 @@ const Navigation = () => {
         <div className="max-w-[1400px] mx-auto container-padding">
           <div className="flex items-center justify-between h-16 gap-8">
             {/* Logo - Section 1 */}
-            <Link href={`/${locale}`} className="flex items-center space-x-2 flex-shrink-0 -ml-6">
+            <Link href={`/${locale}`} className="flex items-center space-x-2 flex-shrink-0 lg:-ml-6">
               <div className="w-40 h-12">
                 <Image
                   src="/logos/word_logo.png"
@@ -75,7 +86,7 @@ const Navigation = () => {
             </Link>
 
             {/* Desktop Navigation - Section 2 (5 main page links) */}
-            <div className="hidden lg:flex items-center justify-center space-x-6 flex-1">
+            <div className="hidden xl:flex items-center justify-center space-x-6 flex-1">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -89,7 +100,7 @@ const Navigation = () => {
             </div>
 
             {/* Desktop Page Links - Section 3 (3 other page links) */}
-            <div className="hidden lg:flex items-center justify-center space-x-6 flex-1">
+            <div className="hidden xl:flex items-center justify-center space-x-6 flex-1">
               <Link
                 href={`/${locale}/about`}
                 className="text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium whitespace-nowrap"
@@ -111,7 +122,7 @@ const Navigation = () => {
             </div>
 
             {/* Language Toggle and Quote Button - Section 4 */}
-            <div className="hidden lg:flex items-center justify-end space-x-3 flex-shrink-0">
+            <div className="hidden xl:flex items-center justify-end space-x-3 flex-shrink-0">
               <LanguageToggle />
               <StyledButton
                 variant="secondary"
@@ -133,7 +144,7 @@ const Navigation = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300 transform hover:scale-110 active:scale-95"
+              className="xl:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300 transform hover:scale-110 active:scale-95"
             >
               {isOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
@@ -144,7 +155,7 @@ const Navigation = () => {
       {/* Mobile menu */}
       <div className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
-      } lg:hidden`}>
+      } xl:hidden`}>
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
         <div className="fixed right-0 top-0 h-full w-80 max-w-[90vw] bg-white shadow-xl">
           <div className="flex flex-col h-full">

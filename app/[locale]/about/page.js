@@ -1,4 +1,6 @@
 "use client"
+import { useParams, useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Navigation from '@/components/ui/Navigation'
 import Footer from '@/components/sections/Footer'
@@ -8,26 +10,11 @@ import { CheckIcon, ShieldIcon, StarIcon } from '@/components/ui/Icons'
 import WhyChooseVeritas from '@/components/sections/WhyChooseVeritas'
 
 export default function About() {
-  const teamMembers = [
-    {
-      name: 'Pierre Gauthier',
-      role: 'Founder & Lead Insulation Specialist',
-      image: '/team/pierre-gauthier.jpg',
-      bio: 'Pierre founded Veritas Insulation to bring honest, high-quality service to Ottawa families.'
-    },
-    {
-      name: 'Mike Thompson',
-      role: 'Senior Installation Technician',
-      image: '/team/mike-thompson.jpg',
-      bio: 'Mike has been perfecting insulation installation techniques for 8 years, ensuring every job meets our exacting standards.'
-    },
-    {
-      name: 'Sarah Williams',
-      role: 'Customer Experience Manager',
-      image: '/team/sarah-williams.jpg',
-      bio: 'Sarah ensures every customer has a smooth experience from initial consultation through project completion.'
-    }
-  ]
+  const params = useParams()
+  const router = useRouter()
+  const locale = params.locale || 'en'
+  const t = useTranslations('about')
+  const tCommon = useTranslations('common')
 
   // const milestones = [
   //   { year: '2013', event: 'Veritas Insulation founded in Ottawa' },
@@ -41,23 +28,23 @@ export default function About() {
 
   const values = [
     {
-      title: 'Integrity First',
-      description: 'We provide honest assessments and transparent pricing. No surprise costs, no high-pressure sales tactics.',
+      title: t('integrityFirst'),
+      description: t('integrityDescription'),
       icon: ShieldIcon
     },
     {
-      title: 'Quality Craftsmanship',
-      description: 'Every installation meets our rigorous standards. We use premium materials and proven techniques.',
+      title: t('qualityCraftsmanship'),
+      description: t('qualityCraftsmanshipDescription'),
       icon: StarIcon
     },
     {
-      title: 'Customer Focus',
-      description: 'Your comfort and satisfaction drive everything we do. We\'re not satisfied unless you are.',
+      title: t('customerFocus'),
+      description: t('customerFocusDescription'),
       icon: CheckIcon
     },
     {
-      title: 'Fully Insured',
-      description: 'Pierre is fully insured in the case of an accident, providing complete peace of mind for every project.',
+      title: t('fullyInsured'),
+      description: t('fullyInsuredDescription'),
       icon: ShieldIcon
     }
   ]
@@ -74,37 +61,36 @@ export default function About() {
   return (
     <>
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-[66px] sm:pt-8 md:pt-0">
         {/* Hero Section */}
         <section className="section-padding bg-gradient-to-br from-primary-50 to-white">
           <div className="max-w-[1400px] mx-auto container-padding">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fade-in-up">
                 <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
-                  About{' '}
-                  <span className="text-primary-500 font-medium">Veritas</span>
+                  {t('title')}{' '}
+                  <span className="text-primary-500 font-medium">{t('titleHighlight')}</span>
                 </h1>
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Ottawa's trusted insulation specialists,
-                  helping families create more comfortable, energy-efficient homes.
+                  {t('subtitle')}
                 </p>
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary-500 mb-1">R-60+</div>
-                    <div className="text-sm text-gray-600">Premium Materials</div>
+                    <div className="text-sm text-gray-600">{t('premiumMaterials')}</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary-500 mb-1">100%</div>
-                    <div className="text-sm text-gray-600">Licensed & Insured</div>
+                    <div className="text-sm text-gray-600">{t('licensedInsured')}</div>
                   </div>
                 </div>
                 <StyledButton
                   variant="accent"
                   size="lg"
-                  className="glow-important"
-                  onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="glow-important w-full md:w-auto md:px-12"
+                  onClick={() => router.push(`/${locale}/contact`)}
                 >
-                  Get Your Free Quote
+                  {t('getFreeQuote')}
                 </StyledButton>
               </div>
 
@@ -112,14 +98,15 @@ export default function About() {
                 <div className="relative">
                   <Image
                     src="/images/about/image.png"
-                    alt="Pierre Gauthier - Founder of Veritas Insulation"
+                    alt={t('imageAlt')}
                     width={600}
                     height={500}
-                    className="rounded-3xl shadow-2xl"
+                    className="rounded-3xl shadow-2xl  w-full"
+                    style={{ objectFit: 'cover' }}
                   />
                   <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
-                    <div className="text-2xl font-bold text-[#60a5fa] mb-1">Ottawa</div>
-                    <div className="text-sm text-gray-700">Local & Trusted</div>
+                    <div className="text-2xl font-bold text-[#60a5fa] mb-1">{t('ottawa')}</div>
+                    <div className="text-sm text-gray-700">{t('localTrusted')}</div>
                   </div>
                 </div>
               </div>
@@ -132,34 +119,25 @@ export default function About() {
           <div className="max-w-4xl mx-auto container-padding">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-                Our Story
+                {t('ourStory')}
               </h2>
             </div>
 
             <div className="prose prose-lg prose-gray max-w-none">
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                Veritas Insulation was born from a simple belief: every Ottawa family deserves
-                a comfortable, energy-efficient home without breaking the bank or dealing with
-                dishonest contractors.
+                {t('storyParagraph1')}
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Founded by Pierre Gauthier, Veritas began as a response to the poor
-                service and inflated pricing he witnessed in the industry. Pierre's vision
-                was clear: provide transparent pricing, use premium materials, and treat
-                every home as if it were his own.
+                {t('storyParagraph2')}
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                As a new insulation company, our core values guide everything we do. We believe in
-                honest assessments, fair pricing, and workmanship that stands the test of time.
+                {t('storyParagraph3')}
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                We're proud to have helped families reduce their energy
-                costs while improving their home comfort. Every installation, every customer
-                interaction, and every warranty we honor reflects our commitment to being
-                the insulation company Ottawa families can trust.
+                {t('storyParagraph4')}
               </p>
             </div>
           </div>
@@ -170,10 +148,10 @@ export default function About() {
           <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-                Our Values
+                {t('ourValues')}
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                The principles that guide every project and customer interaction
+                {t('valuesSubtitle')}
               </p>
             </div>
 
@@ -254,37 +232,35 @@ export default function About() {
           <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-                Meet Our Team
+                {t('meetOurTeam')}
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                Experienced professionals dedicated to your home's comfort and efficiency
+                {t('teamSubtitle')}
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <Card key={member.name} variant="elevated" className="h-full">
-                  <CardContent className="p-8 text-center">
-                    <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {member.name}
-                    </h3>
-                    <p className="text-primary-500 font-medium mb-4">
-                      {member.role}
-                    </p>
-                    <p className="text-gray-700 leading-relaxed">
-                      {member.bio}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="flex justify-center">
+              <Card variant="elevated" className="max-w-md w-full">
+                <CardContent className="p-8 text-center">
+                  <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                    <Image
+                      src="/team/pierre-gauthier.jpg"
+                      alt="Pierre Gauthier"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Pierre Gauthier
+                  </h3>
+                  <p className="text-primary-500 font-medium mb-4">
+                    {t('founderRole')}
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('founderBio')}
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -324,20 +300,19 @@ export default function About() {
         <section className="section-padding bg-primary-500">
           <div className="max-w-4xl mx-auto container-padding text-center">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
-              Ready to Join Our Family of Satisfied Customers?
+              {t('ctaTitle')}
             </h2>
             <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Experience the Veritas difference with a free, no-obligation assessment
-              of your home's insulation needs.
+              {t('ctaSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <StyledButton
                 variant="secondary"
                 size="lg"
                 className="glow-important"
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => router.push(`/${locale}/contact`)}
               >
-                Schedule Free Assessment
+                {t('scheduleFreeAssessment')}
               </StyledButton>
               <StyledButton
                 variant="accent"
@@ -345,7 +320,7 @@ export default function About() {
                 className="glow-important"
                 onClick={() => window.location.href = 'tel:6138079255'}
               >
-                Call (613) 807-9255
+                {t('callPhone')}
               </StyledButton>
             </div>
           </div>

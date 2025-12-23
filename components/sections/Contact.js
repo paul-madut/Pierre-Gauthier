@@ -303,7 +303,7 @@ const Contact = () => {
                   <div className="py-2">Wakefield</div>
                 </div>
                 <p className="text-sm text-gray-600 mt-6 pt-6 border-t border-gray-200">
-                  Don't see your area? <a href="tel:6138079255" className="text-primary-500 hover:underline">Call us</a> - we may still be able to help!
+                  {t('dontSeeAreaPart1')} <a href="tel:6138079255" className="text-primary-500 hover:underline">{t('callUs')}</a> {t('dontSeeAreaPart2')}
                 </p>
               </CardContent>
             </Card>

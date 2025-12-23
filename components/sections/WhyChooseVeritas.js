@@ -1,14 +1,17 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { BentoGrid, BentoGridItem } from '../ui/BentoGrid'
 import { CheckIcon, ShieldIcon, ClockIcon, DollarSignIcon, AwardIcon, CalculatorIcon } from '../ui/Icons'
 
 const WhyChooseVeritas = () => {
+  const t = useTranslations('features')
+
   const features = [
     {
-      title: 'Free, No-Obligation Assessment',
-      description: 'Get a comprehensive evaluation of your insulation needs without any pressure or commitment.',
+      title: t('freeAssessment'),
+      description: t('freeAssessmentDesc'),
       icon: <CheckIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-1',
       header: (
@@ -24,8 +27,8 @@ const WhyChooseVeritas = () => {
       ),
     },
     {
-      title: 'Same-Day Quotes Available',
-      description: 'Fast turnaround on estimates so you can make informed decisions quickly.',
+      title: t('sameDayQuotes'),
+      description: t('sameDayQuotesDesc'),
       icon: <ClockIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-1',
       header: (
@@ -41,8 +44,8 @@ const WhyChooseVeritas = () => {
       ),
     },
     {
-      title: 'Licensed & Insured Technicians',
-      description: 'Work with fully certified professionals who meet industry standards and safety requirements.',
+      title: t('licensedTechnicians'),
+      description: t('licensedTechniciansDesc'),
       icon: <ShieldIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-1',
       header: (
@@ -58,8 +61,8 @@ const WhyChooseVeritas = () => {
       ),
     },
     {
-      title: 'Transparent, Upfront Pricing',
-      description: 'Clear, detailed quotes with no hidden fees or surprise charges. What we quote is what you pay.',
+      title: t('transparentPricing'),
+      description: t('transparentPricingDesc'),
       icon: <DollarSignIcon className="w-6 h-6 text-[#60a5fa]" />,
       className: 'md:col-span-2',
       header: (
@@ -76,20 +79,19 @@ const WhyChooseVeritas = () => {
       ),
     },
     {
-      title: 'Rebate Assistance Included',
-      description: 'We help you navigate and claim all available government and utility rebates to maximize your savings.',
+      title: t('rebateAssistance'),
+      description: t('rebateAssistanceDesc'),
       icon: <CalculatorIcon className="w-6 h-6 text-[#60a5fa]" />,
-      className: 'md:col-span-2',
+      className: 'md:col-span-1',
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white overflow-hidden relative">
           <Image
-            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=300&fit=crop"
+            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=300&fit=crop"
             alt="Rebate assistance and savings"
             fill
             className="object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#82caff]/10 to-[#60a5fa]/5" />
-          <div className="absolute top-0 left-0 w-32 h-32 bg-[#82caff]/5 rounded-br-full" />
         </div>
       ),
     },
@@ -100,11 +102,11 @@ const WhyChooseVeritas = () => {
       <div className="max-w-[1400px] mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Why Ottawa Families Choose{' '}
-            <span className="text-primary-500 font-medium">Veritas</span>
+            {t('whyOttawaChooses')}{' '}
+            <span className="text-primary-500 font-medium">{t('veritas')}</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Experience the difference of working with a trusted insulation partner
+            {t('experienceDifference')}
           </p>
         </div>
 

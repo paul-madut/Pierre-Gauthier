@@ -1,6 +1,8 @@
+
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { useTranslations } from 'next-intl';
 import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/sections/Footer';
 import BlogProjectsContent from '@/components/ui/BlogProjectsContent';
@@ -63,28 +65,24 @@ function getAllProjects() {
   return projects;
 }
 
-export const metadata = {
-  title: 'Blog - Veritas Insulation',
-  description: 'Expert insights on attic insulation, energy efficiency tips, home comfort solutions, and the latest in sustainable home improvements from the Veritas team.',
-};
-
 export default function BlogPage() {
   const posts = getAllPosts();
   const projects = getAllProjects();
+  const t = useTranslations('blog');
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <main className="pt-32 pb-20">
+      <main className="pt-[130px] pb-20">
         <div className="max-w-[1400px] mx-auto container-padding">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Our <span className="text-primary-500">Blog</span> & <span className="text-primary-500">Projects</span>
+              {t('title')} <span className="text-primary-500">{t('titleBlog')}</span> {t('titleAnd')} <span className="text-primary-500">{t('titleProjects')}</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert insights on attic insulation, energy efficiency tips, and real project transformations from the Veritas team.
+              {t('subtitle')}
             </p>
           </div>
 

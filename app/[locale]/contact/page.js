@@ -1,12 +1,17 @@
 "use client"
+import { useTranslations } from 'next-intl'
 import Navigation from '@/components/ui/Navigation'
 import Footer from '@/components/sections/Footer'
 import Contact from '@/components/sections/Contact'
 import WhyChooseVeritas from '@/components/sections/WhyChooseVeritas'
 import { Card, CardContent } from '@/components/ui/Card'
 import { PhoneIcon, EmailIcon, LocationIcon } from '@/components/ui/Icons'
+import StyledButton from '@/components/ui/StyledButton'
 
 export default function ContactPage() {
+  const t = useTranslations('contactPage')
+  const tCommon = useTranslations('common')
+
   const serviceAreas = [
     'Ottawa', 'Kanata', 'Nepean', 'Orleans', 'Barrhaven', 'Stittsville',
     'Manotick', 'Gloucester', 'Cumberland', 'Rockland', 'Arnprior', 'Smiths Falls',
@@ -16,46 +21,57 @@ export default function ContactPage() {
   const contactMethods = [
     {
       icon: PhoneIcon,
-      title: 'Call or Text',
-      details: '(613) 807-9255',
-      description: 'Available 5 days a week',
+      title: t('callOrText'),
+      details: t('phone'),
+      description: t('availableDays'),
       action: 'tel:6138079255',
-      actionText: 'Call Now'
+      actionText: t('callNow')
     },
     {
       icon: EmailIcon,
-      title: 'Email Us',
-      details: 'pierre@veritasinsulation.com',
-      description: 'We respond within 24 hours on weekdays',
+      title: t('emailUs'),
+      details: t('email'),
+      description: t('responseTime'),
       action: 'mailto:pierre@veritasinsulation.com',
-      actionText: 'Send Email'
+      actionText: t('sendEmail')
     },
     {
       icon: LocationIcon,
-      title: 'Service Area',
-      details: 'Ottawa & 30km Radius',
-      description: 'Free estimates throughout our service area',
+      title: t('serviceAreaTitle'),
+      details: t('serviceAreaDetails'),
+      description: t('serviceAreaDescription'),
       action: '#service-areas',
-      actionText: 'View Areas'
+      actionText: t('viewAreas')
     }
   ]
 
   return (
     <>
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-[66px]">
         {/* Hero Section */}
         <section className="section-padding bg-gradient-to-br from-primary-50 to-white">
           <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
-                Get Your{' '}
-                <span className="text-primary-500 font-medium">Free Quote</span>
+                {t('title')}{' '}
+                <span className="text-primary-500 font-medium">{t('titleHighlight')}</span>
               </h1>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
-                Ready to start saving on energy costs? Contact Ottawa's trusted
-                insulation specialists for your free assessment.
+                {t('subtitle')}
               </p>
+              <StyledButton
+                variant="accent"
+                size="lg"
+                onClick={() => {
+                  document.getElementById('contact-form').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                  })
+                }}
+              >
+                {t('fillOutForm')}
+              </StyledButton>
             </div>
 
             {/* Contact Methods */}
@@ -93,17 +109,19 @@ export default function ContactPage() {
         <WhyChooseVeritas />
 
         {/* Main Contact Section */}
-        <Contact />
+        <div id="contact-form">
+          <Contact />
+        </div>
 
         {/* Service Areas */}
         <section id="service-areas" className="section-padding bg-gray-50">
           <div className="max-w-[1400px] mx-auto container-padding">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-                Service Areas
+                {t('serviceAreasTitle')}
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                We proudly serve Ottawa and surrounding communities within a 30km radius
+                {t('serviceAreasSubtitle')}
               </p>
             </div>
 
@@ -113,7 +131,7 @@ export default function ContactPage() {
                 <Card variant="elevated">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                      Areas We Serve
+                      {t('areasWeServe')}
                     </h3>
                     <div className="grid grid-cols-2 gap-4">
                       {serviceAreas.map((area, index) => (
@@ -125,8 +143,7 @@ export default function ContactPage() {
                     </div>
                     <div className="mt-6 p-4 bg-primary-50 rounded-lg">
                       <p className="text-primary-800 text-sm">
-                        <strong>Don't see your area listed?</strong> We may still be able to help!
-                        Contact us for areas outside our standard service zone.
+                        <strong>{t('dontSeeArea')}</strong> {t('dontSeeAreaDescription')}
                       </p>
                     </div>
                   </CardContent>
@@ -138,10 +155,10 @@ export default function ContactPage() {
                 <Card variant="default">
                   <CardContent className="p-6">
                     <h4 className="font-semibold text-gray-900 mb-2">
-                      Free Estimates Throughout Service Area
+                      {t('freeEstimates')}
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      No travel charges or hidden fees for estimates within our service area
+                      {t('freeEstimatesDescription')}
                     </p>
                   </CardContent>
                 </Card>
@@ -149,10 +166,10 @@ export default function ContactPage() {
                 <Card variant="default">
                   <CardContent className="p-6">
                     <h4 className="font-semibold text-gray-900 mb-2">
-                      Same-Day Service Available
+                      {t('sameDayService')}
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Emergency consultations and rush jobs available for urgent needs
+                      {t('sameDayServiceDescription')}
                     </p>
                   </CardContent>
                 </Card>
@@ -160,10 +177,10 @@ export default function ContactPage() {
                 <Card variant="default">
                   <CardContent className="p-6">
                     <h4 className="font-semibold text-gray-900 mb-2">
-                      Local Expertise
+                      {t('localExpertise')}
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      We understand Ottawa's climate and building codes for optimal results
+                      {t('localExpertiseDescription')}
                     </p>
                   </CardContent>
                 </Card>
@@ -171,10 +188,10 @@ export default function ContactPage() {
                 <Card variant="default">
                   <CardContent className="p-6">
                     <h4 className="font-semibold text-gray-900 mb-2">
-                      Ongoing Support
+                      {t('ongoingSupport')}
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Local team available for warranty service and follow-up support
+                      {t('ongoingSupportDescription')}
                     </p>
                   </CardContent>
                 </Card>

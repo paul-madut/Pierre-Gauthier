@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import ContentToggle from './ContentToggle';
@@ -10,6 +11,7 @@ const BlogProjectsContent = ({ posts, projects }) => {
   const [activeView, setActiveView] = useState('blog');
   const params = useParams();
   const locale = params.locale || 'en';
+  const t = useTranslations('blog');
 
   const currentItems = activeView === 'blog' ? posts : projects;
   const basePath = activeView === 'blog' ? `/${locale}/blog` : `/${locale}/projects`;
@@ -24,8 +26,8 @@ const BlogProjectsContent = ({ posts, projects }) => {
         <div className="text-center py-20">
           <p className="text-gray-500 text-lg">
             {activeView === 'blog'
-              ? 'No blog posts yet. Check back soon!'
-              : 'No projects yet. Check back soon!'}
+              ? t('noBlogPosts')
+              : t('noProjects')}
           </p>
         </div>
       ) : (
@@ -95,7 +97,7 @@ const BlogProjectsContent = ({ posts, projects }) => {
 
                   {/* Read More */}
                   <div className="flex items-center text-primary-500 font-medium group-hover:gap-2 transition-all mt-auto">
-                    <span>{activeView === 'blog' ? 'Read More' : 'View Project'}</span>
+                    <span>{activeView === 'blog' ? t('readMore') : t('viewProject')}</span>
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
                       fill="none"
