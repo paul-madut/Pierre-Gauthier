@@ -157,8 +157,7 @@ const Hero = () => {
                     {t('formTitle')}
                   </h2>
                   <p className="text-gray-600">
-                    {t('formSubtitle', { phone: tCommon('phone') }).split('{phone}')[0]}
-                    {t('formSubtitle', { phone: tCommon('phone') }).split('{phone}')[1]}
+                    {t('formSubtitle', { phone: tCommon('phone') })}
                   </p>
                 </div>
 
