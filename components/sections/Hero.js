@@ -157,9 +157,9 @@ const Hero = () => {
                     {t('formTitle')}
                   </h2>
                   <p className="text-gray-600">
-                    {t('formSubtitle', { phone: tCommon('phone') }).split('{phone}')[0]}
+                    {t('formSubtitle')[0]}
                     <a href={`tel:${tCommon('phone').replace(/[^0-9]/g, '')}`} className="text-primary-500 font-medium hover:underline">{tCommon('phone')}</a>
-                    {t('formSubtitle', { phone: tCommon('phone') }).split('{phone}')[1]}
+                    {t('formSubtitle')[1]}
                   </p>
                 </div>
 
